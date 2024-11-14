@@ -6,10 +6,21 @@ namespace DTS.Woodworm
 {
     public class PlayerControl : MonoBehaviour
     {
+        public enum FaceDirection
+        {
+            Left, Right, Up, Down
+        }
+
+        public bool canControl;
+
+        FaceDirection faceDirection = FaceDirection.Right;
+
         List<Vector3> movement = new List<Vector3>();
 
         private void Update()
         {
+            if(!canControl) return;
+
             InputDirection();
             MoveInGrid();
         }
@@ -18,30 +29,34 @@ namespace DTS.Woodworm
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                if (movement.Count == 0)
+                if (movement.Count == 0 && faceDirection != FaceDirection.Left)
                 {
                     movement.Add(transform.position + Vector3.right);
+                    faceDirection = FaceDirection.Right;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                if (movement.Count == 0)
+                if (movement.Count == 0 && faceDirection != FaceDirection.Right)
                 {
                     movement.Add(transform.position + Vector3.left);
+                    faceDirection = FaceDirection.Left;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.W))
+            else if (Input.GetKeyDown(KeyCode.W) && faceDirection != FaceDirection.Down)
             {
                 if (movement.Count == 0)
                 {
                     movement.Add(transform.position + Vector3.up);
+                    faceDirection = FaceDirection.Up;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S) && faceDirection != FaceDirection.Up)
             {
                 if (movement.Count == 0)
                 {
                     movement.Add(transform.position + Vector3.down);
+                    faceDirection = FaceDirection.Down;
                 }
             }
 
