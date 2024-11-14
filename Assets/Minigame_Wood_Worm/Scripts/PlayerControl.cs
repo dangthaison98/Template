@@ -74,7 +74,7 @@ namespace DTS.Woodworm
                 case Direction.Left:
                     if (faceDirection != Direction.Right)
                     {
-                        if(Physics2D.Raycast(transform.position, Vector2.left, 1)) return;
+                        if(Physics2D.Raycast(transform.position, Vector2.left, 1, LayerMask.GetMask("Default"))) return;
 
                         movement.Add(transform.position + Vector3.left);
                         currentHeadPos = transform.position;
@@ -85,7 +85,7 @@ namespace DTS.Woodworm
                 case Direction.Right:
                     if (faceDirection != Direction.Left)
                     {
-                        if (Physics2D.Raycast(transform.position, Vector2.right, 1)) return;
+                        if (Physics2D.Raycast(transform.position, Vector2.right, 1, LayerMask.GetMask("Default"))) return;
 
                         movement.Add(transform.position + Vector3.right);
                         currentHeadPos = transform.position;
@@ -96,7 +96,7 @@ namespace DTS.Woodworm
                 case Direction.Up:
                     if (faceDirection != Direction.Down)
                     {
-                        if (Physics2D.Raycast(transform.position, Vector2.up, 1)) return;
+                        if (Physics2D.Raycast(transform.position, Vector2.up, 1, LayerMask.GetMask("Default"))) return;
 
                         movement.Add(transform.position + Vector3.up);
                         currentHeadPos = transform.position;
@@ -107,7 +107,7 @@ namespace DTS.Woodworm
                 case Direction.Down:
                     if (faceDirection != Direction.Up)
                     {
-                        if (Physics2D.Raycast(transform.position, Vector2.down, 1)) return;
+                        if (Physics2D.Raycast(transform.position, Vector2.down, 1, LayerMask.GetMask("Default"))) return;
 
                         movement.Add(transform.position + Vector3.down);
                         currentHeadPos = transform.position;
