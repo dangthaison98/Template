@@ -13,9 +13,14 @@ namespace DTS.Woodworm
 
         public bool canControl;
 
+        public GameObject body;
+        public GameObject tail;
+
         Direction faceDirection = Direction.Right;
 
         List<Vector3> movement = new List<Vector3>();
+        Vector2 currentHeadPos;
+        Vector2 currentBodyPos;
 
         private void Update()
         {
@@ -50,7 +55,9 @@ namespace DTS.Woodworm
             if (movement.Count > 0)
             {
                 transform.position = Vector2.MoveTowards(transform.position, movement[0], 10 * Time.deltaTime);
-                if(transform.position == movement[0])
+                body.transform.position = Vector2.MoveTowards(body.transform.position, currentHeadPos, 10 * Time.deltaTime);
+                tail.transform.position = Vector2.MoveTowards(tail.transform.position, currentBodyPos, 10 * Time.deltaTime);
+                if (transform.position == movement[0])
                 {
                     movement.RemoveAt(0);
                 }
@@ -69,6 +76,8 @@ namespace DTS.Woodworm
                         if(Physics2D.Raycast(transform.position, Vector2.left, 1)) return;
 
                         movement.Add(transform.position + Vector3.left);
+                        currentHeadPos = transform.position;
+                        currentBodyPos = body.transform.position;
                         faceDirection = Direction.Left;
                     }
                     break;
@@ -78,6 +87,8 @@ namespace DTS.Woodworm
                         if (Physics2D.Raycast(transform.position, Vector2.right, 1)) return;
 
                         movement.Add(transform.position + Vector3.right);
+                        currentHeadPos = transform.position;
+                        currentBodyPos = body.transform.position;
                         faceDirection = Direction.Right;
                     }
                     break;
@@ -87,6 +98,8 @@ namespace DTS.Woodworm
                         if (Physics2D.Raycast(transform.position, Vector2.up, 1)) return;
 
                         movement.Add(transform.position + Vector3.up);
+                        currentHeadPos = transform.position;
+                        currentBodyPos = body.transform.position;
                         faceDirection = Direction.Up;
                     }
                     break;
@@ -96,6 +109,8 @@ namespace DTS.Woodworm
                         if (Physics2D.Raycast(transform.position, Vector2.down, 1)) return;
 
                         movement.Add(transform.position + Vector3.down);
+                        currentHeadPos = transform.position;
+                        currentBodyPos = body.transform.position;
                         faceDirection = Direction.Down;
                     }
                     break;
