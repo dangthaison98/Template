@@ -21,11 +21,11 @@ namespace DTS.Woodworm
         {
             if(!canControl) return;
 
-            InputDirection();
+            GetInputPC();
             MoveInGrid();
         }
 
-        void InputDirection()
+        void GetInputPC()
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -44,6 +44,7 @@ namespace DTS.Woodworm
                 MoveDirection(Direction.Down);
             }
         }
+
         void MoveInGrid()
         {
             if (movement.Count > 0)
