@@ -123,14 +123,16 @@ namespace DTS.Woodworm
         {
             if(!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
             {
-                if(!Physics2D.Raycast(transform.position, Vector2.down, 1) 
-                    && !Physics2D.Raycast(body.transform.position, Vector2.down, 1) 
-                    && !Physics2D.Raycast(tail.transform.position, Vector2.down, 1))
+                if(Physics2D.Raycast(transform.position, Vector2.down, 1) 
+                    || Physics2D.Raycast(body.transform.position, Vector2.down, 1) 
+                    || Physics2D.Raycast(tail.transform.position, Vector2.down, 1))
                 {
-                    movement.Add(transform.position + Vector3.down);
-                    currentHeadPos = body.transform.position + Vector3.down;
-                    currentBodyPos = tail.transform.position + Vector3.down;
+                    return;
                 }
+
+                movement.Add(transform.position + Vector3.down);
+                currentHeadPos = body.transform.position + Vector3.down;
+                currentBodyPos = tail.transform.position + Vector3.down;
             }
         }
     }
