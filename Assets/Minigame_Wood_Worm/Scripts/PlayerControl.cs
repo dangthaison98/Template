@@ -19,8 +19,8 @@ namespace DTS.Woodworm
         Direction faceDirection = Direction.Right;
 
         List<Vector3> movement = new List<Vector3>();
-        Vector2 currentHeadPos;
-        Vector2 currentBodyPos;
+        Vector3 currentHeadPos;
+        Vector3 currentBodyPos;
 
         private void Update()
         {
@@ -60,6 +60,7 @@ namespace DTS.Woodworm
                 if (transform.position == movement[0])
                 {
                     movement.RemoveAt(0);
+                    CheckFall();
                 }
             }
         }
@@ -114,6 +115,22 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Down;
                     }
                     break;
+            }
+        }
+
+        private Vector2 boxCheck = new Vector2(1.2f, 0.1f);
+        void CheckFall()
+        {
+            if(!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
+            {
+                if(!Physics2D.Raycast(transform.position, Vector2.down, 1) 
+                    && !Physics2D.Raycast(body.transform.position, Vector2.down, 1) 
+                    && !Physics2D.Raycast(tail.transform.position, Vector2.down, 1))
+                {
+                    movement.Add(transform.position + Vector3.down);
+                    currentHeadPos = body.transform.position + Vector3.down;
+                    currentBodyPos = tail.transform.position + Vector3.down;
+                }
             }
         }
     }
