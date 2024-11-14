@@ -59,31 +59,33 @@ namespace DTS.Woodworm
 
         public void MoveDirection(Direction direction)
         {
+            if (movement.Count > 0) return;
+
             switch (direction) 
             { 
                 case Direction.Left:
-                    if (movement.Count == 0 && faceDirection != Direction.Right)
+                    if (faceDirection != Direction.Right)
                     {
                         movement.Add(transform.position + Vector3.left);
                         faceDirection = Direction.Left;
                     }
                     break;
                 case Direction.Right:
-                    if (movement.Count == 0 && faceDirection != Direction.Left)
+                    if (faceDirection != Direction.Left)
                     {
                         movement.Add(transform.position + Vector3.right);
                         faceDirection = Direction.Right;
                     }
                     break;
                 case Direction.Up:
-                    if (movement.Count == 0 && faceDirection != Direction.Down)
+                    if (faceDirection != Direction.Down)
                     {
                         movement.Add(transform.position + Vector3.up);
                         faceDirection = Direction.Up;
                     }
                     break;
                 case Direction.Down:
-                    if (movement.Count == 0 && faceDirection != Direction.Up)
+                    if (faceDirection != Direction.Up)
                     {
                         movement.Add(transform.position + Vector3.down);
                         faceDirection = Direction.Down;
