@@ -20,10 +20,7 @@ namespace DTS.Woodworm
         [Header("Layer")]
         public LayerMask groundLayer;
 
-
-
         Direction faceDirection = Direction.Right;
-
         List<Vector3> movement = new List<Vector3>();
         Vector3 currentHeadPos;
         Vector3 currentBodyPos;
