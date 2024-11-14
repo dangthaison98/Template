@@ -18,44 +18,28 @@ namespace DTS.Woodworm
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                if (movement.Count > 0)
-                {
-                    movement.Add(movement[movement.Count - 1] + Vector3.right);
-                }
-                else
+                if (movement.Count == 0)
                 {
                     movement.Add(transform.position + Vector3.right);
                 }
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                if (movement.Count > 0)
-                {
-                    movement.Add(movement[movement.Count - 1] + Vector3.left);
-                }
-                else
+                if (movement.Count == 0)
                 {
                     movement.Add(transform.position + Vector3.left);
                 }
             }
             else if (Input.GetKeyDown(KeyCode.W))
             {
-                if (movement.Count > 0)
-                {
-                    movement.Add(movement[movement.Count - 1] + Vector3.up);
-                }
-                else
+                if (movement.Count == 0)
                 {
                     movement.Add(transform.position + Vector3.up);
                 }
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
-                if (movement.Count > 0)
-                {
-                    movement.Add(movement[movement.Count - 1] + Vector3.down);
-                }
-                else
+                if (movement.Count == 0)
                 {
                     movement.Add(transform.position + Vector3.down);
                 }
@@ -66,7 +50,7 @@ namespace DTS.Woodworm
         {
             if (movement.Count > 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, movement[0], 5 * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, movement[0], 10 * Time.deltaTime);
                 if(transform.position == movement[0])
                 {
                     movement.RemoveAt(0);
