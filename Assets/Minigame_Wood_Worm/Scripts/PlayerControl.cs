@@ -43,17 +43,17 @@ namespace DTS.Woodworm
                     faceDirection = FaceDirection.Left;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.W) && faceDirection != FaceDirection.Down)
+            else if (Input.GetKeyDown(KeyCode.W))
             {
-                if (movement.Count == 0)
+                if (movement.Count == 0 && faceDirection != FaceDirection.Down)
                 {
                     movement.Add(transform.position + Vector3.up);
                     faceDirection = FaceDirection.Up;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.S) && faceDirection != FaceDirection.Up)
+            else if (Input.GetKeyDown(KeyCode.S))
             {
-                if (movement.Count == 0)
+                if (movement.Count == 0 && faceDirection != FaceDirection.Up)
                 {
                     movement.Add(transform.position + Vector3.down);
                     faceDirection = FaceDirection.Down;
