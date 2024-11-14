@@ -1,6 +1,6 @@
 {
-    "name": "DTS.WoodWorm",
-    "rootNamespace": "DTS.WoodWorm",
+    "name": "DTS.Woodworm",
+    "rootNamespace": "DTS.Woodworm",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
