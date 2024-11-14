@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 527870750}
   - component: {fileID: 527870749}
   - component: {fileID: 527870751}
+  - component: {fileID: 527870752}
   m_Layer: 0
   m_Name: Worm
   m_TagString: Untagged
@@ -311,6 +312,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53cde23b4bd4e540bd457f8b58d3da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canControl: 0
+--- !u!50 &527870752
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527870748}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
