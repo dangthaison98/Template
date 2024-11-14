@@ -29,19 +29,19 @@ namespace DTS.Woodworm
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                CheckDirection(Direction.Left);
+                MoveDirection(Direction.Left);
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                CheckDirection(Direction.Right);
+                MoveDirection(Direction.Right);
             }
             if (Input.GetKeyDown(KeyCode.W))
             {
-                CheckDirection(Direction.Up);
+                MoveDirection(Direction.Up);
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                CheckDirection(Direction.Down);
+                MoveDirection(Direction.Down);
             }
         }
         void MoveInGrid()
@@ -56,7 +56,7 @@ namespace DTS.Woodworm
             }
         }
 
-        public void CheckDirection(Direction direction)
+        public void MoveDirection(Direction direction)
         {
             switch (direction) 
             { 
