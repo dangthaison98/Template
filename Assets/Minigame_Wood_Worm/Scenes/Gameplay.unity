@@ -506,6 +506,9 @@ MonoBehaviour:
   canControl: 1
   body: {fileID: 1826680618}
   tail: {fileID: 756741867}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &756741867
 GameObject:
   m_ObjectHideFlags: 0
