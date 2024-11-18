@@ -18,7 +18,7 @@ namespace DTS.Woodworm
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            if (GUILayout.Button("Create Blocks"))
+            if (GUILayout.Button("Create Blocks", GUILayout.Height(50)))
             {
                 tileHolder.CreateBlocks();
             }
