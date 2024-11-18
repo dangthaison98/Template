@@ -46,25 +46,21 @@ namespace DTS.Woodworm
                     if (map[pos].leftTile)
                     {
                         map[pos].leftTile.rightTile = null;
-                        map[pos].leftTile.countNeighbor--;
                         tempTile = map[pos].leftTile;
                     }
                     if (map[pos].rightTile)
                     {
                         map[pos].rightTile.leftTile = null;
-                        map[pos].rightTile.countNeighbor--;
                         tempTile = map[pos].rightTile;
                     }
                     if (map[pos].topTile)
                     {
                         map[pos].topTile.bottomTile = null;
-                        map[pos].topTile.countNeighbor--;
                         tempTile = map[pos].topTile;
                     }
                     if (map[pos].bottomTile)
                     {
                         map[pos].bottomTile.topTile = null;
-                        map[pos].bottomTile.countNeighbor--;
                         tempTile = map[pos].bottomTile;
                     }
                     Destroy(map[pos].gameObject);
@@ -141,8 +137,6 @@ namespace DTS.Woodworm
                             {
                                 map.Add(key.transform.position, key);
                             }
-
-                            Debug.LogError(maps.Count);
                         }
                     }
 
@@ -156,25 +150,21 @@ namespace DTS.Woodworm
             if (maps[0].ContainsKey(pos))
             {
                 tile.leftTile = maps[0][pos];
-                tile.countNeighbor++;
             }
             pos = tile.transform.position + Vector3.right;
             if (maps[0].ContainsKey(pos))
             {
                 tile.rightTile = maps[0][pos];
-                tile.countNeighbor++;
             }
             pos = tile.transform.position + Vector3.up;
             if (maps[0].ContainsKey(pos))
             {
                 tile.topTile = maps[0][pos];
-                tile.countNeighbor++;
             }
             pos = tile.transform.position + Vector3.down;
             if (maps[0].ContainsKey(pos))
             {
                 tile.bottomTile = maps[0][pos];
-                tile.countNeighbor++;
             }
         }
     }

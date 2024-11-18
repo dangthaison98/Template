@@ -7,7 +7,6 @@ namespace DTS.Woodworm
     public class TileControl : MonoBehaviour
     {
         public TileControl leftTile, rightTile, topTile, bottomTile;
-        public int countNeighbor;
 
         public void Setup()
         {
