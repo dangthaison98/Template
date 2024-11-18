@@ -5,9 +5,8 @@ using UnityEngine.Tilemaps;
 
 namespace DTS.Woodworm
 {
-    public class LevelHolder : MonoBehaviour
+    public class TileHolder : MonoBehaviour
     {
-        public Tilemap demoShape;
         public List<TileControl> tiles = new List<TileControl>();
 
         private void Start()
@@ -15,6 +14,10 @@ namespace DTS.Woodworm
             foreach (TileControl tile in tiles)
             {
                 tile.Setup();
+            }
+            foreach (TileControl tile in tiles)
+            {
+                GameManager.Instance.GetNeighborTile(tile);
             }
         }
     }
