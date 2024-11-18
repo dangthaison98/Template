@@ -11,7 +11,7 @@ namespace DTS.Woodworm
 
         public void Setup()
         {
-            GameManager.Instance.map.Add(transform.position, this);
+            GameManager.Instance.InitTile(this, 0);
         }
         public void AutoTile()
         {
