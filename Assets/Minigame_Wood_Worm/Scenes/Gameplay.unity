@@ -168,6 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &57876461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -345,6 +350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &512068125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -683,6 +693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &625035026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -791,7 +806,7 @@ GameObject:
   - component: {fileID: 655207216}
   - component: {fileID: 655207217}
   m_Layer: 4
-  m_Name: Level 1
+  m_Name: Tile Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,7 +848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c4e3e4a8147b45aafbf91f21fa07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  demoShape: {fileID: 0}
   tiles:
   - {fileID: 1502448336}
   - {fileID: 1810503925}
@@ -974,6 +988,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &904581964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1117,6 +1136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &1045861219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1260,6 +1284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &1502448337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1403,6 +1432,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &1810503926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1546,6 +1580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &1811505494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1975,6 +2014,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  topTile: {fileID: 0}
+  bottomTile: {fileID: 0}
+  countNeighbor: 0
 --- !u!61 &2098622061
 BoxCollider2D:
   m_ObjectHideFlags: 0
