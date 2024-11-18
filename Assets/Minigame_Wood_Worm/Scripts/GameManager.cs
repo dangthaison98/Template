@@ -24,13 +24,13 @@ namespace DTS.Woodworm
         }
 
 
-        public Dictionary<Vector2, Transform> map = new Dictionary<Vector2, Transform>();
+        public Dictionary<Vector2, TileControl> map = new Dictionary<Vector2, TileControl>();
         
         public void DestroyTile(Vector3 pos)
         {
             if (map.ContainsKey(pos))
             {
-                //Destroy
+                Destroy(map[pos].gameObject);
                 map.Remove(pos);
             }
         }

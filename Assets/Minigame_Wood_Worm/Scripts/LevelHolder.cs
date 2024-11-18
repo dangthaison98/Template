@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace DTS.Woodworm
 {
     public class LevelHolder : MonoBehaviour
     {
-        public List<TileControl> tiles;
+        public Tilemap demoShape;
+        public List<TileControl> tiles = new List<TileControl>();
     }
 }
