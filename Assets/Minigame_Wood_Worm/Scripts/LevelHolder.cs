@@ -6,6 +6,6 @@ namespace DTS.Woodworm
 {
     public class LevelHolder : MonoBehaviour
     {
-        
+        public List<TileControl> tiles;
     }
 }
