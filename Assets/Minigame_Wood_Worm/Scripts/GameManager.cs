@@ -24,6 +24,7 @@ namespace DTS.Woodworm
             }
         }
 
+        [HideInInspector] public TileHolder tileHolder;
 
         List<Dictionary<Vector2, TileControl>> maps = new List<Dictionary<Vector2, TileControl>>();
         
@@ -63,6 +64,7 @@ namespace DTS.Woodworm
                         map[pos].bottomTile.topTile = null;
                         tempTile = map[pos].bottomTile;
                     }
+                    tileHolder.tiles.Remove(map[pos]);
                     Destroy(map[pos].gameObject);
                     map.Remove(pos);
 

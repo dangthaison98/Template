@@ -15,6 +15,8 @@ namespace DTS.Woodworm
 
         private void Start()
         {
+            GameManager.Instance.tileHolder = this;
+
             foreach (TileControl tile in tiles)
             {
                 tile.Setup();
