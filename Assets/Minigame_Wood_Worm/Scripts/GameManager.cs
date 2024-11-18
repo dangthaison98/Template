@@ -80,6 +80,7 @@ namespace DTS.Woodworm
                     {
                         Dictionary<Vector2, TileControl> tempDictionary = new Dictionary<Vector2, TileControl>();
                         List<TileControl> tempList = new List<TileControl>();
+                        tempDictionary.Add(tempTile.transform.position, tempTile);
                         tempList.Add(tempTile);
                         while(tempList.Count > 0)
                         {
