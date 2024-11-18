@@ -7,7 +7,10 @@ namespace DTS.Woodworm
     public class TileControl : MonoBehaviour
     {
         
-
+        public void Setup()
+        {
+            GameManager.Instance.map.Add(transform.position, this);
+        }
         public void AutoTile()
         {
 

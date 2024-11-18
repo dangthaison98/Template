@@ -9,5 +9,13 @@ namespace DTS.Woodworm
     {
         public Tilemap demoShape;
         public List<TileControl> tiles = new List<TileControl>();
+
+        private void Start()
+        {
+            foreach (TileControl tile in tiles)
+            {
+                tile.Setup();
+            }
+        }
     }
 }

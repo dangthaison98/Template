@@ -119,6 +119,9 @@ namespace DTS.Woodworm
                     }
                     break;
             }
+
+            if (movement.Count > 0)
+                GameManager.Instance.DestroyTile(movement[0]);
         }
 
         private Vector2 boxCheck = new Vector2(1.2f, 0.1f);
