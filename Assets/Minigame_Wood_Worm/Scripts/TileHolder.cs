@@ -24,6 +24,7 @@ namespace DTS.Woodworm
                 {
                     standPos = new Vector3Int(100 + x, 100 + y);
                     tiles[tileIndex].pos = standPos;
+                    tileIndex++;
                     GameManager.Instance.getSpriteTilemap.SetTile(standPos, GameManager.Instance.tileBase);
                 }
             }

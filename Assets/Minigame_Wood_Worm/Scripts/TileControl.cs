@@ -23,5 +23,11 @@ namespace DTS.Woodworm
         {
             spriteRenderer.sprite = GameManager.Instance.getSpriteTilemap.GetSprite(pos);
         }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.getSpriteTilemap.SetTile(pos, null);
+            GameManager.Instance.OnAutoTile -= AutoTile;
+        }
     }
 }
