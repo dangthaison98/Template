@@ -70,9 +70,9 @@ namespace DTS.Woodworm
 
             tiles.Clear();
 
-            for(int x = 0; x < size.x; x++)
+            for(int y = 0; y < size.y; y++)
             {
-                for (int y = 0; y < size.y; y++)
+                for (int x = 0; x < size.x; x++)
                 {
                     tiles.Add(Instantiate(tile, startPos + new Vector2(x + 0.5f, y + 0.5f), Quaternion.identity, transform).GetComponent<TileControl>());
                 }
