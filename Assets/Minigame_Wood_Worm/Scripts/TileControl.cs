@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace DTS.Woodworm
 {
@@ -22,12 +23,14 @@ namespace DTS.Woodworm
         public void AutoTile()
         {
             spriteRenderer.sprite = GameManager.Instance.getSpriteTilemap.GetSprite(pos);
-        }
-
-        private void OnDestroy()
-        {
-            GameManager.Instance.getSpriteTilemap.SetTile(pos, null);
-            GameManager.Instance.OnAutoTile -= AutoTile;
+            if(GameManager.Instance.getSpriteTilemap.GetTransformMatrix(pos).m00 == -1)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                spriteRenderer.flipX = false;
+            }
         }
     }
 }

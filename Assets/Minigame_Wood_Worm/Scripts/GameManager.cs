@@ -109,6 +109,8 @@ namespace DTS.Woodworm
                         tempTile = map[pos].bottomTile;
                     }
                     tileHolder.tiles.Remove(map[pos]);
+                    getSpriteTilemap.SetTile(map[pos].pos, null);
+                    OnAutoTile -= map[pos].AutoTile;
                     Destroy(map[pos].gameObject);
                     map.Remove(pos);
                     mapBlockHolder.Remove(pos);
