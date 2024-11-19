@@ -26,20 +26,20 @@ namespace DTS.Woodworm
 
         [HideInInspector] public TileHolder tileHolder;
 
-        List<Dictionary<Vector2, TileControl>> maps = new List<Dictionary<Vector2, TileControl>>();
+        List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
         
         public void InitTile(TileControl tile, int count)
         {
-            if (maps.Count == 0)
+            if (chunk.Count == 0)
             {
-                maps.Add(new Dictionary<Vector2, TileControl>());
+                chunk.Add(new Dictionary<Vector2, TileControl>());
             }
-            maps[count].Add(tile.transform.position, tile);
+            chunk[count].Add(tile.transform.position, tile);
         }
 
         public void DestroyTile(Vector3 pos)
         {
-            foreach (var map in maps)
+            foreach (var map in chunk)
             {
                 if (map.ContainsKey(pos))
                 {
@@ -70,7 +70,7 @@ namespace DTS.Woodworm
 
                     if(map.Count == 0)
                     {
-                        maps.Remove(map);
+                        chunk.Remove(map);
                         return;
                     }
 
@@ -119,7 +119,7 @@ namespace DTS.Woodworm
 
                         if(tempDictionary.Count != map.Count)
                         {
-                            maps.Add(tempDictionary);
+                            chunk.Add(tempDictionary);
 
                             List<Vector2> listPos = map.Keys.ToList();
                             for(int i = listPos.Count - 1; i >= 0; i--)
@@ -149,24 +149,38 @@ namespace DTS.Woodworm
         public void GetNeighborTile(TileControl tile)
         {
             Vector3 pos = tile.transform.position + Vector3.left;
-            if (maps[0].ContainsKey(pos))
+            if (chunk[0].ContainsKey(pos))
             {
-                tile.leftTile = maps[0][pos];
+                tile.leftTile = chunk[0][pos];
             }
             pos = tile.transform.position + Vector3.right;
-            if (maps[0].ContainsKey(pos))
+            if (chunk[0].ContainsKey(pos))
             {
-                tile.rightTile = maps[0][pos];
+                tile.rightTile = chunk[0][pos];
             }
             pos = tile.transform.position + Vector3.up;
-            if (maps[0].ContainsKey(pos))
+            if (chunk[0].ContainsKey(pos))
             {
-                tile.topTile = maps[0][pos];
+                tile.topTile = chunk[0][pos];
             }
             pos = tile.transform.position + Vector3.down;
-            if (maps[0].ContainsKey(pos))
+            if (chunk[0].ContainsKey(pos))
             {
-                tile.bottomTile = maps[0][pos];
+                tile.bottomTile = chunk[0][pos];
+            }
+        }
+
+        void CheckFall()
+        {
+            foreach (var map in chunk) 
+            {
+                foreach (var key in map)
+                {
+                    if (!key.Value.bottomTile)
+                    {
+
+                    }
+                }
             }
         }
     }
