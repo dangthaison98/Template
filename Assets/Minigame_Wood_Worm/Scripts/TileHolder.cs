@@ -18,9 +18,9 @@ namespace DTS.Woodworm
             int tileIndex = 0;
             Vector3Int standPos = Vector3Int.zero;
             GameManager.Instance.getSpriteTilemap.ClearAllTiles();
-            for (int x = 0; x < size.x; x++)
+            for (int y = 0; y < size.y; y++)
             {
-                for (int y = 0; y < size.y; y++)
+                for (int x = 0; x < size.x; x++)
                 {
                     standPos = new Vector3Int(100 + x, 100 + y);
                     tiles[tileIndex].pos = standPos;

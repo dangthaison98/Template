@@ -260,13 +260,30 @@ namespace DTS.Woodworm
         {
             if(mapBlockHolder.Count == tileHolder.countDemoBlock)
             {
+                int tileIndex = 0;
+                Vector3 lockDemoPos = Vector3.zero;
+                Vector3 lockTilePos = tileHolder.tiles[0].transform.position;
                 foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
                 {
                     if (tileHolder.demoShape.GetTile(pos) != null) 
                     { 
-
+                        if(tileIndex == 0)
+                        {
+                            lockDemoPos = pos;
+                        }
+                        else
+                        {
+                            if(pos - lockDemoPos != tileHolder.tiles[tileIndex].transform.position - lockTilePos)
+                            {
+                                Debug.Log("Lose");
+                                return;
+                            }
+                        }
+                        tileIndex++;
                     }
                 }
+
+                Debug.Log("Win");
             }
         }
     }
