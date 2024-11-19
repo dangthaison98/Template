@@ -39,6 +39,8 @@ namespace DTS.Woodworm
             {
                 GameManager.Instance.GetNeighborTile(tile);
             }
+
+            GameManager.Instance.OnAutoTile?.Invoke();
         }
 
         public int GetAmountOfDirtTiles()
