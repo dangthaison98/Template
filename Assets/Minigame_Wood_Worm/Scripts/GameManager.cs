@@ -26,15 +26,35 @@ namespace DTS.Woodworm
 
         [HideInInspector] public TileHolder tileHolder;
 
+        Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
         List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
         
         public void InitTile(TileControl tile, int count)
         {
+            mapBlockHolder.Add(tile.transform.position, tile);
+
             if (chunk.Count == 0)
             {
                 chunk.Add(new Dictionary<Vector2, TileControl>());
             }
             chunk[count].Add(tile.transform.position, tile);
+        }
+
+        private void Update()
+        {
+            if (fallChunk >= 0)
+            {
+                foreach (var key in chunk[fallChunk])
+                {
+                    key.Value.transform.position = Vector2.MoveTowards(key.Value.transform.position, key.Key + Vector2.down, 10 * Time.deltaTime);
+                    if ((Vector2)key.Value.transform.position == key.Key + Vector2.down)
+                    {
+                        fallChunk = -1;
+                        CheckFall();
+                    }
+                }
+
+            }
         }
 
         public void DestroyTile(Vector3 pos)
@@ -67,6 +87,7 @@ namespace DTS.Woodworm
                     tileHolder.tiles.Remove(map[pos]);
                     Destroy(map[pos].gameObject);
                     map.Remove(pos);
+                    mapBlockHolder.Remove(pos);
 
                     if(map.Count == 0)
                     {
@@ -145,6 +166,8 @@ namespace DTS.Woodworm
                     return;
                 }
             }
+
+            CheckFall();
         }
         public void GetNeighborTile(TileControl tile)
         {
@@ -170,16 +193,26 @@ namespace DTS.Woodworm
             }
         }
 
+        int fallChunk = -1;
         void CheckFall()
         {
+            bool isFall;
             foreach (var map in chunk) 
             {
+                isFall = true;
                 foreach (var key in map)
                 {
                     if (!key.Value.bottomTile)
                     {
-
+                        mapBlockHolder.ContainsKey(key.Key + Vector2.down);
+                        isFall = false;
+                        break;
                     }
+                }
+                if (isFall)
+                {
+                    fallChunk = chunk.IndexOf(map);
+                    return;
                 }
             }
         }
