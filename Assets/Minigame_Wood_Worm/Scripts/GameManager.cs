@@ -275,7 +275,6 @@ namespace DTS.Woodworm
                         {
                             if(pos - lockDemoPos != tileHolder.tiles[tileIndex].transform.position - lockTilePos)
                             {
-                                Debug.Log("Lose");
                                 return;
                             }
                         }
@@ -283,7 +282,25 @@ namespace DTS.Woodworm
                     }
                 }
 
+                //Win
                 PlayerControl.instance.canControl = false;
+                tileIndex = 0;
+                foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
+                {
+                    if (tileHolder.demoShape.GetTile(pos) != null)
+                    {
+                        tileHolder.tiles[tileIndex].spriteRenderer.sprite = tileHolder.demoShape.GetSprite(pos);
+                        if (tileHolder.demoShape.GetTransformMatrix(pos).m00 == -1)
+                        {
+                            tileHolder.tiles[tileIndex].spriteRenderer.flipX = true;
+                        }
+                        else
+                        {
+                            tileHolder.tiles[tileIndex].spriteRenderer.flipX = false;
+                        }
+                        tileIndex++;
+                    }
+                }
             }
         }
     }
