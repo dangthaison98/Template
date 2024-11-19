@@ -145,6 +145,7 @@ namespace DTS.Woodworm
                 movement.Add(transform.position + Vector3.down);
                 currentHeadPos = body.position + Vector3.down;
                 currentBodyPos = tail.position + Vector3.down;
+                GameManager.Instance.CheckFall();
             }
         }
     }

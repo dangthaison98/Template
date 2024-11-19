@@ -223,7 +223,7 @@ namespace DTS.Woodworm
         }
 
         int fallChunk = -1;
-        void CheckFall()
+        public void CheckFall()
         {
             bool isFall;
             foreach (var map in chunk) 
