@@ -26,13 +26,12 @@ namespace DTS.Woodworm
 
         [HideInInspector] public TileHolder tileHolder;
 
-        Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
+        public Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
         List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
         
         public void InitTile(TileControl tile, int count)
         {
             mapBlockHolder.Add(tile.transform.position, tile);
-
             if (chunk.Count == 0)
             {
                 chunk.Add(new Dictionary<Vector2, TileControl>());
@@ -49,8 +48,18 @@ namespace DTS.Woodworm
                     key.Value.transform.position = Vector2.MoveTowards(key.Value.transform.position, key.Key + Vector2.down, 10 * Time.deltaTime);
                     if ((Vector2)key.Value.transform.position == key.Key + Vector2.down)
                     {
+                        mapBlockHolder.Clear();
+                        for (int i = 0; i < chunk.Count; i++)
+                        {
+                            chunk[i].Clear();
+                            foreach(var item in chunk[i])
+                            {
+                                item.Value.RebakeMap(i);
+                            }
+                        }
                         fallChunk = -1;
                         CheckFall();
+                        return;
                     }
                 }
 
@@ -202,9 +211,13 @@ namespace DTS.Woodworm
                 isFall = true;
                 foreach (var key in map)
                 {
-                    if (!key.Value.bottomTile)
+                    if (!key.Value.bottomTile && mapBlockHolder.ContainsKey(key.Key + Vector2.down))
                     {
-                        mapBlockHolder.ContainsKey(key.Key + Vector2.down);
+                        isFall = false;
+                        break;
+                    }
+                    if(key.Key.y < 1)
+                    {
                         isFall = false;
                         break;
                     }

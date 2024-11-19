@@ -12,6 +12,10 @@ namespace DTS.Woodworm
         {
             GameManager.Instance.InitTile(this, 0);
         }
+        public void RebakeMap(int map)
+        {
+            GameManager.Instance.InitTile(this, map);
+        }
         public void AutoTile()
         {
 
