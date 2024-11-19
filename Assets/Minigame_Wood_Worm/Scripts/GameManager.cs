@@ -228,7 +228,6 @@ namespace DTS.Woodworm
 
                     Vector3 headPos = PlayerControl.instance.movement.Count > 0 ? PlayerControl.instance.movement[0] : PlayerControl.instance.transform.position;
 
-
                     if ((Vector2)headPos == key.Key + Vector2.down ||
                         (Vector2)PlayerControl.instance.currentHeadPos == key.Key + Vector2.down ||
                         (Vector2)PlayerControl.instance.currentBodyPos == key.Key + Vector2.down)
