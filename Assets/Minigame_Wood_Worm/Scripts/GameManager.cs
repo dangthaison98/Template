@@ -40,30 +40,37 @@ namespace DTS.Woodworm
             chunk[count].Add(tile.transform.position, tile);
         }
 
+        bool isDoneFall;
         private void Update()
         {
             if (fallChunk >= 0)
             {
+                isDoneFall = true;
                 foreach (var key in chunk[fallChunk])
                 {
                     key.Value.transform.position = Vector2.MoveTowards(key.Value.transform.position, key.Key + Vector2.down, 10 * Time.deltaTime);
-                    if ((Vector2)key.Value.transform.position == key.Key + Vector2.down)
+                    if ((Vector2)key.Value.transform.position != key.Key + Vector2.down)
                     {
-                        mapBlockHolder.Clear();
-                        for (int i = 0; i < chunk.Count; i++)
-                        {
-                            chunk[i].Clear();
-                            foreach(var item in chunk[i])
-                            {
-                                item.Value.RebakeMap(i);
-                            }
-                        }
-                        fallChunk = -1;
-                        CheckFall();
-                        return;
+                        isDoneFall = false;
                     }
                 }
 
+                if (isDoneFall)
+                {
+                    mapBlockHolder.Clear();
+                    for (int i = 0; i < chunk.Count; i++)
+                    {
+                        TileControl[] tempTileList = chunk[i].Values.ToArray();
+                        chunk[i].Clear();
+                        foreach (var item in tempTileList)
+                        {
+                            item.RebakeMap(i);
+                        }
+                    }
+                    fallChunk = -1;
+                    CheckFall();
+                    return;
+                }
             }
         }
 
