@@ -7,9 +7,9 @@ namespace DTS.Woodworm
     public class TileHolder : MonoBehaviour
     {
         public Tilemap demoShape;
-        public int countDemoBlock;
+        [HideInInspector] public int countDemoBlock;
 
-        public List<TileControl> tiles = new List<TileControl>();
+        [HideInInspector] public List<TileControl> tiles = new List<TileControl>();
 
         private void Start()
         {
