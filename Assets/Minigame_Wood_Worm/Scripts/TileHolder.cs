@@ -65,7 +65,10 @@ namespace DTS.Woodworm
 
             foreach (TileControl tile in tiles) 
             {
-                DestroyImmediate(tile.gameObject);
+                if (tile)
+                {
+                    DestroyImmediate(tile.gameObject);
+                }
             }
 
             tiles.Clear();
