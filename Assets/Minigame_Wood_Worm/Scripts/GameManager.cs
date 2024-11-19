@@ -109,6 +109,7 @@ namespace DTS.Woodworm
                     if(map.Count == 0)
                     {
                         chunk.Remove(map);
+                        CheckFall();
                         return;
                     }
 
@@ -180,6 +181,7 @@ namespace DTS.Woodworm
                         }
                     }
 
+                    CheckFall();
                     return;
                 }
             }
@@ -219,12 +221,15 @@ namespace DTS.Woodworm
                 isFall = true;
                 foreach (var key in map)
                 {
-                    if (!key.Value.bottomTile && mapBlockHolder.ContainsKey(key.Key + Vector2.down))
+                    if (!key.Value.bottomTile && (mapBlockHolder.ContainsKey(key.Key + Vector2.down) || key.Key.y < 1))
                     {
                         isFall = false;
                         break;
                     }
-                    if(key.Key.y < 1)
+
+                    if ((Vector2)PlayerControl.instance.movement[0] == key.Key + Vector2.down ||
+                        (Vector2)PlayerControl.instance.currentHeadPos == key.Key + Vector2.down ||
+                        (Vector2)PlayerControl.instance.currentBodyPos == key.Key + Vector2.down)
                     {
                         isFall = false;
                         break;

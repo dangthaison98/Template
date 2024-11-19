@@ -6,6 +6,8 @@ namespace DTS.Woodworm
 {
     public class PlayerControl : MonoBehaviour
     {
+        public static PlayerControl instance;
+
         public enum Direction
         {
             Left, Right, Up, Down
@@ -21,10 +23,14 @@ namespace DTS.Woodworm
         public LayerMask groundLayer;
 
         Direction faceDirection = Direction.Right;
-        List<Vector3> movement = new List<Vector3>();
-        Vector3 currentHeadPos;
-        Vector3 currentBodyPos;
+        [HideInInspector] public List<Vector3> movement = new List<Vector3>();
+        [HideInInspector] public Vector3 currentHeadPos;
+        [HideInInspector] public Vector3 currentBodyPos;
 
+        private void Awake()
+        {
+            instance = this;
+        }
         private void Update()
         {
             if(!canControl) return;
