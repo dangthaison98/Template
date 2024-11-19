@@ -16,8 +16,8 @@ namespace DTS.Woodworm
         public bool canControl;
 
         [Header("Part")]
-        public GameObject body;
-        public GameObject tail;
+        public Transform body;
+        public Transform tail;
 
         [Header("Layer")]
         public LayerMask groundLayer;
@@ -64,8 +64,8 @@ namespace DTS.Woodworm
             if (movement.Count > 0)
             {
                 transform.position = Vector2.MoveTowards(transform.position, movement[0], 10 * Time.deltaTime);
-                body.transform.position = Vector2.MoveTowards(body.transform.position, currentHeadPos, 10 * Time.deltaTime);
-                tail.transform.position = Vector2.MoveTowards(tail.transform.position, currentBodyPos, 10 * Time.deltaTime);
+                body.position = Vector2.MoveTowards(body.position, currentHeadPos, 10 * Time.deltaTime);
+                tail.position = Vector2.MoveTowards(tail.position, currentBodyPos, 10 * Time.deltaTime);
                 if (transform.position == movement[0])
                 {
                     movement.RemoveAt(0);
@@ -87,7 +87,7 @@ namespace DTS.Woodworm
 
                         movement.Add(transform.position + Vector3.left);
                         currentHeadPos = transform.position;
-                        currentBodyPos = body.transform.position;
+                        currentBodyPos = body.position;
                         faceDirection = Direction.Left;
                     }
                     break;
@@ -98,7 +98,7 @@ namespace DTS.Woodworm
 
                         movement.Add(transform.position + Vector3.right);
                         currentHeadPos = transform.position;
-                        currentBodyPos = body.transform.position;
+                        currentBodyPos = body.position;
                         faceDirection = Direction.Right;
                     }
                     break;
@@ -109,7 +109,7 @@ namespace DTS.Woodworm
 
                         movement.Add(transform.position + Vector3.up);
                         currentHeadPos = transform.position;
-                        currentBodyPos = body.transform.position;
+                        currentBodyPos = body.position;
                         faceDirection = Direction.Up;
                     }
                     break;
@@ -120,7 +120,7 @@ namespace DTS.Woodworm
 
                         movement.Add(transform.position + Vector3.down);
                         currentHeadPos = transform.position;
-                        currentBodyPos = body.transform.position;
+                        currentBodyPos = body.position;
                         faceDirection = Direction.Down;
                     }
                     break;
@@ -133,18 +133,18 @@ namespace DTS.Woodworm
         private Vector2 boxCheck = new Vector2(1.2f, 0.1f);
         void CheckFall()
         {
-            if(!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
+            if(!Physics2D.OverlapBox(body.position, boxCheck, 0))
             {
                 if(Physics2D.Raycast(transform.position, Vector2.down, 1) 
-                    || Physics2D.Raycast(body.transform.position, Vector2.down, 1) 
-                    || Physics2D.Raycast(tail.transform.position, Vector2.down, 1))
+                    || Physics2D.Raycast(body.position, Vector2.down, 1) 
+                    || Physics2D.Raycast(tail.position, Vector2.down, 1))
                 {
                     return;
                 }
 
                 movement.Add(transform.position + Vector3.down);
-                currentHeadPos = body.transform.position + Vector3.down;
-                currentBodyPos = tail.transform.position + Vector3.down;
+                currentHeadPos = body.position + Vector3.down;
+                currentBodyPos = tail.position + Vector3.down;
             }
         }
     }

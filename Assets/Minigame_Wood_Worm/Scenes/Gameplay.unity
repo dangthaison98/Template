@@ -1567,8 +1567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canControl: 1
-  body: {fileID: 1826680618}
-  tail: {fileID: 756741867}
+  body: {fileID: 1826680620}
+  tail: {fileID: 756741869}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
