@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace DTS.Woodworm
 {
@@ -28,7 +30,13 @@ namespace DTS.Woodworm
 
         Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
         List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
-        
+
+
+        public Tilemap getSpriteTilemap;
+        public TileBase tileBase;
+        public Action OnAutoTile;
+
+
         public void InitTile(TileControl tile, int count)
         {
             mapBlockHolder.Add(tile.transform.position, tile);
@@ -104,6 +112,7 @@ namespace DTS.Woodworm
                     Destroy(map[pos].gameObject);
                     map.Remove(pos);
                     mapBlockHolder.Remove(pos);
+                    OnAutoTile?.Invoke();
 
                     if(map.Count == 0)
                     {
@@ -240,6 +249,21 @@ namespace DTS.Woodworm
                 {
                     fallChunk = chunk.IndexOf(map);
                     return;
+                }
+            }
+
+            CheckWin();
+        }
+        void CheckWin()
+        {
+            if(mapBlockHolder.Count == tileHolder.countDemoBlock)
+            {
+                foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
+                {
+                    if (tileHolder.demoShape.GetTile(pos) != null) 
+                    { 
+
+                    }
                 }
             }
         }

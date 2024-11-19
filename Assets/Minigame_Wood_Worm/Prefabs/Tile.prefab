@@ -143,7 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46180952e9caaeb4482ae890300e7041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1286585248027785110}
   leftTile: {fileID: 0}
   rightTile: {fileID: 0}
   topTile: {fileID: 0}
   bottomTile: {fileID: 0}
+  pos: {x: 0, y: 0, z: 0}

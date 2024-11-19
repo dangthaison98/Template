@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -9,11 +8,25 @@ namespace DTS.Woodworm
     {
         public Tilemap demoShape;
         public int countDemoBlock;
+
         public List<TileControl> tiles = new List<TileControl>();
 
         private void Start()
         {
             countDemoBlock = GetAmountOfDirtTiles();
+
+            int tileIndex = 0;
+            Vector3Int standPos = Vector3Int.zero;
+            GameManager.Instance.getSpriteTilemap.ClearAllTiles();
+            for (int x = 0; x < size.x; x++)
+            {
+                for (int y = 0; y < size.y; y++)
+                {
+                    standPos = new Vector3Int(100 + x, 100 + y);
+                    tiles[tileIndex].pos = standPos;
+                    GameManager.Instance.getSpriteTilemap.SetTile(standPos, GameManager.Instance.tileBase);
+                }
+            }
 
             GameManager.Instance.tileHolder = this;
 
