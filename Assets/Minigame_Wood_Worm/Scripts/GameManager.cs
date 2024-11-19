@@ -283,7 +283,7 @@ namespace DTS.Woodworm
                     }
                 }
 
-                Debug.Log("Win");
+                PlayerControl.instance.canControl = false;
             }
         }
     }
