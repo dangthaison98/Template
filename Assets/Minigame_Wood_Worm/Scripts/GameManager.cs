@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 namespace DTS.Woodworm
 {
@@ -27,8 +26,8 @@ namespace DTS.Woodworm
 
         [HideInInspector] public TileHolder tileHolder;
 
-        [ShowInInspector] public Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
-        [ShowInInspector] List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
+        Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
+        List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
         
         public void InitTile(TileControl tile, int count)
         {
