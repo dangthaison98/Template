@@ -7,10 +7,6 @@ namespace DTS.Woodworm
 {
     public class TileHolder : MonoBehaviour
     {
-        public GameObject tile;
-        public Vector2Int startPos;
-        public Vector2Int size;
-
         public List<TileControl> tiles = new List<TileControl>();
 
         private void Start()
@@ -27,6 +23,10 @@ namespace DTS.Woodworm
             }
         }
 
+        #if UNITY_EDITOR
+        public GameObject tile;
+        public Vector2Int startPos;
+        public Vector2Int size;
         public void CreateBlocks()
         {
             foreach (TileControl tile in tiles) 
@@ -44,5 +44,6 @@ namespace DTS.Woodworm
                 }
             }
         }
+        #endif
     }
 }
