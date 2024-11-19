@@ -29,6 +29,8 @@ namespace DTS.Woodworm
         public Vector2Int size;
         public void CreateBlocks()
         {
+            if (tile == null) return;
+
             foreach (TileControl tile in tiles) 
             {
                 DestroyImmediate(tile.gameObject);
