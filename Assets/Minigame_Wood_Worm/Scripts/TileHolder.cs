@@ -7,10 +7,14 @@ namespace DTS.Woodworm
 {
     public class TileHolder : MonoBehaviour
     {
+        public Tilemap demoShape;
+        public int countDemoBlock;
         public List<TileControl> tiles = new List<TileControl>();
 
         private void Start()
         {
+            countDemoBlock = GetAmountOfDirtTiles();
+
             GameManager.Instance.tileHolder = this;
 
             foreach (TileControl tile in tiles)
@@ -23,7 +27,19 @@ namespace DTS.Woodworm
             }
         }
 
-        #if UNITY_EDITOR
+        public int GetAmountOfDirtTiles()
+        {
+            demoShape.CompressBounds();
+            int amount = 0;
+            foreach (var pos in demoShape.cellBounds.allPositionsWithin)
+            {
+                if (demoShape.GetTile(pos) != null) { amount += 1; }
+            }
+
+            return amount;
+        }
+
+#if UNITY_EDITOR
         public GameObject tile;
         public Vector2Int startPos;
         public Vector2Int size;
