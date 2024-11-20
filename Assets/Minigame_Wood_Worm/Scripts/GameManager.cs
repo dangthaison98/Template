@@ -319,7 +319,7 @@ namespace DTS.Woodworm
         }
         public void Undo()
         {
-            if (saveDatas.Count == 0 || !PlayerControl.instance.canControl) return;
+            if (saveDatas.Count == 0 || isWin) return;
 
             SaveData saveData = saveDatas.Last();
 
