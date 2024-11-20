@@ -50,6 +50,8 @@ namespace DTS.Woodworm
 
         private void Awake()
         {
+            Application.targetFrameRate = 60;
+
             int level = PlayerPrefs.GetInt("Level", 0) % levelData.levels.Length;
             Instantiate(levelData.levels[level]);
         }
@@ -316,7 +318,7 @@ namespace DTS.Woodworm
         }
         public void Undo()
         {
-            if (saveDatas.Count == 0) return;
+            if (saveDatas.Count == 0 || !PlayerControl.instance.canControl) return;
 
             SaveData saveData = saveDatas.Last();
 
