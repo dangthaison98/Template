@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
-using static UnityEditor.PlayerSettings;
 
 namespace DTS.Woodworm
 {
