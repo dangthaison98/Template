@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using static UnityEditor.PlayerSettings;
 
 namespace DTS.Woodworm
 {
@@ -252,7 +253,6 @@ namespace DTS.Woodworm
         {
             if(tileHolder.tiles.Count == tileHolder.countDemoBlock)
             {
-                int tileIndex = 0;
                 Vector3 lockDemoPos = Vector3.zero;
                 foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
                 {
@@ -274,21 +274,17 @@ namespace DTS.Woodworm
                 isWin = true;
                 PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
                 PlayerControl.instance.canControl = false;
-                tileIndex = 0;
-                foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
+
+                for (int i = 0; i < tileHolder.tiles.Count; i++)
                 {
-                    if (tileHolder.demoShape.GetTile(pos) != null)
+                    tileHolder.tiles[i].spriteRenderer.sprite = tileHolder.demoShape.GetSprite(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - tileHolder.tiles[0].transform.position));
+                    if (tileHolder.demoShape.GetTransformMatrix(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - tileHolder.tiles[0].transform.position)).m00 == -1)
                     {
-                        tileHolder.tiles[tileIndex].spriteRenderer.sprite = tileHolder.demoShape.GetSprite(pos);
-                        if (tileHolder.demoShape.GetTransformMatrix(pos).m00 == -1)
-                        {
-                            tileHolder.tiles[tileIndex].spriteRenderer.flipX = true;
-                        }
-                        else
-                        {
-                            tileHolder.tiles[tileIndex].spriteRenderer.flipX = false;
-                        }
-                        tileIndex++;
+                        tileHolder.tiles[i].spriteRenderer.flipX = true;
+                    }
+                    else
+                    {
+                        tileHolder.tiles[i].spriteRenderer.flipX = false;
                     }
                 }
             }
