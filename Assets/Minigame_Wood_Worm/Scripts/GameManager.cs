@@ -50,7 +50,8 @@ namespace DTS.Woodworm
 
         private void Awake()
         {
-            
+            int level = PlayerPrefs.GetInt("Level", 0) % levelData.levels.Length;
+            Instantiate(levelData.levels[level]);
         }
 
         bool isDoneFall;
@@ -271,6 +272,8 @@ namespace DTS.Woodworm
                 }
 
                 //Win
+                PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+
                 PlayerControl.instance.canControl = false;
                 tileIndex = 0;
                 foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
