@@ -10,6 +10,7 @@ namespace DTS.Woodworm
         [HideInInspector] public int countDemoBlock;
 
         [HideInInspector] public List<TileControl> tiles = new List<TileControl>();
+        public Vector2Int size;
 
         private void Start()
         {
@@ -54,7 +55,6 @@ namespace DTS.Woodworm
 #if UNITY_EDITOR
         public GameObject tile;
         public Vector2Int startPos;
-        public Vector2Int size;
         public void CreateBlocks()
         {
             if (tile == null) return;
