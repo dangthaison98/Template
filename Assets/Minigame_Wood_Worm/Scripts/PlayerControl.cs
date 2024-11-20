@@ -11,6 +11,7 @@ namespace DTS.Woodworm
         public bool canControl;
 
         [Header("Part")]
+        public SpriteRenderer head;
         public SpriteRenderer body;
         public SpriteRenderer tail;
 
@@ -89,6 +90,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Left;
+                        CheckSprite();
                     }
                     break;
                 case 1:
@@ -101,6 +103,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Right;
+                        CheckSprite();
                     }
                     break;
                 case 2:
@@ -113,6 +116,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Up;
+                        CheckSprite();
                     }
                     break;
                 case 3:
@@ -125,6 +129,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Down;
+                        CheckSprite();
                     }
                     break;
             }
@@ -149,6 +154,57 @@ namespace DTS.Woodworm
                 currentHeadPos = body.transform.position + Vector3.down;
                 currentBodyPos = tail.transform.position + Vector3.down;
                 GameManager.Instance.CheckFall();
+            }
+        }
+
+        void CheckSprite()
+        {
+            //Head
+            switch (faceDirection)
+            {
+                case Direction.Right:
+                    head.sprite = headSprite[0];
+                    break;
+                case Direction.Left:
+                    head.sprite = headSprite[1];
+                    break;
+                case Direction.Up:
+                    head.sprite = headSprite[2];
+                    break;
+                case Direction.Down:
+                    head.sprite = headSprite[3];
+                    break;
+            }
+
+            //Body
+            Vector3 headPos = movement.Count > 0 ? movement[0] : transform.position;
+            Vector3 dir = headPos - currentHeadPos;
+            if (dir == Vector3.up)
+            {
+
+            }
+            else if(dir == Vector3.down)
+            {
+
+            }
+
+            //Tail
+            dir = currentHeadPos - currentBodyPos;
+            if (dir == Vector3.right)
+            {
+                tail.sprite = tailSprite[0];
+            }
+            else if (dir == Vector3.left)
+            {
+                tail.sprite = tailSprite[1];
+            }
+            else if (dir == Vector3.up)
+            {
+                tail.sprite = tailSprite[2];
+            }
+            else if (dir == Vector3.down)
+            {
+                tail.sprite = tailSprite[3];
             }
         }
     }

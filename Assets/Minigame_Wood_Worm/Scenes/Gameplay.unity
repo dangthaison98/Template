@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canControl: 1
+  head: {fileID: 527870749}
   body: {fileID: 1826680619}
   tail: {fileID: 756741868}
   groundLayer:
