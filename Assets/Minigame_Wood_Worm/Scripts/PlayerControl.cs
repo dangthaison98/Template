@@ -8,11 +8,6 @@ namespace DTS.Woodworm
     {
         public static PlayerControl instance;
 
-        public enum Direction
-        {
-            Left, Right, Up, Down
-        }
-
         public bool canControl;
 
         [Header("Part")]
@@ -22,7 +17,7 @@ namespace DTS.Woodworm
         [Header("Layer")]
         public LayerMask groundLayer;
 
-        Direction faceDirection = Direction.Right;
+        [HideInInspector] public Direction faceDirection = Direction.Right;
         [HideInInspector] public List<Vector3> movement = new List<Vector3>();
         [HideInInspector] public Vector3 currentHeadPos;
         [HideInInspector] public Vector3 currentBodyPos;
@@ -152,5 +147,10 @@ namespace DTS.Woodworm
                 GameManager.Instance.CheckFall();
             }
         }
+    }
+
+    public enum Direction
+    {
+        Left, Right, Up, Down
     }
 }

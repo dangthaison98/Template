@@ -254,23 +254,19 @@ namespace DTS.Woodworm
             {
                 int tileIndex = 0;
                 Vector3 lockDemoPos = Vector3.zero;
-                Vector3 lockTilePos = tileHolder.tiles[0].transform.position;
                 foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
                 {
                     if (tileHolder.demoShape.GetTile(pos) != null) 
                     { 
-                        if(tileIndex == 0)
-                        {
-                            lockDemoPos = pos;
-                        }
-                        else
-                        {
-                            if(pos - lockDemoPos != tileHolder.tiles[tileIndex].transform.position - lockTilePos)
-                            {
-                                return;
-                            }
-                        }
-                        tileIndex++;
+                        lockDemoPos = pos;
+                        break;
+                    }
+                }
+                for (int i = 1; i < tileHolder.tiles.Count; i++)
+                {
+                    if (!tileHolder.demoShape.GetTile(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - tileHolder.tiles[0].transform.position)))
+                    {
+                        return;
                     }
                 }
 
@@ -305,6 +301,7 @@ namespace DTS.Woodworm
         public void Save()
         {
             SaveData saveData = new SaveData();
+            saveData.wormDirection = PlayerControl.instance.faceDirection;
             saveData.headPos = PlayerControl.instance.transform.position;
             saveData.bodyPos = PlayerControl.instance.body.position;
             saveData.tailPos = PlayerControl.instance.tail.position;
@@ -323,6 +320,7 @@ namespace DTS.Woodworm
 
             SaveData saveData = saveDatas.Last();
 
+            PlayerControl.instance.faceDirection = saveData.wormDirection;
             PlayerControl.instance.transform.position = saveData.headPos;
             PlayerControl.instance.body.position = saveData.bodyPos;
             PlayerControl.instance.tail.position = saveData.tailPos;
@@ -350,6 +348,7 @@ namespace DTS.Woodworm
     [System.Serializable]
     public class SaveData
     {
+        public Direction wormDirection;
         public Vector3 headPos;
         public Vector3 bodyPos;
         public Vector3 tailPos;
