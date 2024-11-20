@@ -43,19 +43,19 @@ namespace DTS.Woodworm
         {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                MoveDirection(Direction.Left);
+                MoveDirection((int)Direction.Left);
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
-                MoveDirection(Direction.Right);
+                MoveDirection((int)Direction.Right);
             }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
-                MoveDirection(Direction.Up);
+                MoveDirection((int)Direction.Up);
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
-                MoveDirection(Direction.Down);
+                MoveDirection((int)Direction.Down);
             }
         }
 
@@ -74,13 +74,13 @@ namespace DTS.Woodworm
             }
         }
 
-        public void MoveDirection(Direction direction)
+        public void MoveDirection(int direction)
         {
             if (movement.Count > 0) return;
 
             switch (direction) 
             { 
-                case Direction.Left:
+                case 0:
                     if (faceDirection != Direction.Right)
                     {
                         if(Physics2D.Raycast(transform.position, Vector2.left, 1, groundLayer)) return;
@@ -92,7 +92,7 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Left;
                     }
                     break;
-                case Direction.Right:
+                case 1:
                     if (faceDirection != Direction.Left)
                     {
                         if (Physics2D.Raycast(transform.position, Vector2.right, 1, groundLayer)) return;
@@ -104,7 +104,7 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Right;
                     }
                     break;
-                case Direction.Up:
+                case 2:
                     if (faceDirection != Direction.Down)
                     {
                         if (Physics2D.Raycast(transform.position, Vector2.up, 1, groundLayer)) return;
@@ -116,7 +116,7 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Up;
                     }
                     break;
-                case Direction.Down:
+                case 3:
                     if (faceDirection != Direction.Up)
                     {
                         if (Physics2D.Raycast(transform.position, Vector2.down, 1, groundLayer)) return;
