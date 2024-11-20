@@ -88,25 +88,21 @@ namespace DTS.Woodworm
                 if (map.ContainsKey(pos))
                 {
                     TileControl tempTile = null;
-                    if (map[pos].leftTile)
+                    if (mapBlockHolder.ContainsKey(pos + Vector3.left))
                     {
-                        map[pos].leftTile.rightTile = null;
-                        tempTile = map[pos].leftTile;
+                        tempTile = mapBlockHolder[pos + Vector3.left];
                     }
-                    if (map[pos].rightTile)
+                    else if (mapBlockHolder.ContainsKey(pos + Vector3.right))
                     {
-                        map[pos].rightTile.leftTile = null;
-                        tempTile = map[pos].rightTile;
+                        tempTile = mapBlockHolder[pos + Vector3.right];
                     }
-                    if (map[pos].topTile)
+                    else if (mapBlockHolder.ContainsKey(pos + Vector3.up))
                     {
-                        map[pos].topTile.bottomTile = null;
-                        tempTile = map[pos].topTile;
+                        tempTile = mapBlockHolder[pos + Vector3.up];
                     }
-                    if (map[pos].bottomTile)
+                    else if (mapBlockHolder.ContainsKey(pos + Vector3.down))
                     {
-                        map[pos].bottomTile.topTile = null;
-                        tempTile = map[pos].bottomTile;
+                        tempTile = mapBlockHolder[pos + Vector3.down];
                     }
                     tileHolder.tiles.Remove(map[pos]);
                     getSpriteTilemap.SetTile(map[pos].pos, null);
@@ -131,36 +127,36 @@ namespace DTS.Woodworm
                         tempList.Add(tempTile);
                         while(tempList.Count > 0)
                         {
-                            if (tempList[0].leftTile)
+                            if (map.TryGetValue(tempList[0].transform.position + Vector3.left, out tempTile))
                             {
-                                if (!tempDictionary.ContainsKey(tempList[0].leftTile.transform.position))
+                                if (!tempDictionary.ContainsKey(tempList[0].transform.position + Vector3.left))
                                 {
-                                    tempDictionary.Add(tempList[0].leftTile.transform.position, tempList[0].leftTile);
-                                    tempList.Add(tempList[0].leftTile);
+                                    tempDictionary.Add(tempTile.transform.position, tempTile);
+                                    tempList.Add(tempTile);
                                 }
                             }
-                            if (tempList[0].rightTile)
+                            if (map.TryGetValue(tempList[0].transform.position + Vector3.right, out tempTile))
                             {
-                                if (!tempDictionary.ContainsKey(tempList[0].rightTile.transform.position))
+                                if (!tempDictionary.ContainsKey(tempList[0].transform.position + Vector3.right))
                                 {
-                                    tempDictionary.Add(tempList[0].rightTile.transform.position, tempList[0].rightTile);
-                                    tempList.Add(tempList[0].rightTile);
+                                    tempDictionary.Add(tempTile.transform.position, tempTile);
+                                    tempList.Add(tempTile);
                                 }
                             }
-                            if (tempList[0].topTile)
+                            if (map.TryGetValue(tempList[0].transform.position + Vector3.up, out tempTile))
                             {
-                                if (!tempDictionary.ContainsKey(tempList[0].topTile.transform.position))
+                                if (!tempDictionary.ContainsKey(tempList[0].transform.position + Vector3.up))
                                 {
-                                    tempDictionary.Add(tempList[0].topTile.transform.position, tempList[0].topTile);
-                                    tempList.Add(tempList[0].topTile);
+                                    tempDictionary.Add(tempTile.transform.position, tempTile);
+                                    tempList.Add(tempTile);
                                 }
                             }
-                            if (tempList[0].bottomTile)
+                            if (map.TryGetValue(tempList[0].transform.position + Vector3.down, out tempTile))
                             {
-                                if (!tempDictionary.ContainsKey(tempList[0].bottomTile.transform.position))
+                                if (!tempDictionary.ContainsKey(tempList[0].transform.position + Vector3.down))
                                 {
-                                    tempDictionary.Add(tempList[0].bottomTile.transform.position, tempList[0].bottomTile);
-                                    tempList.Add(tempList[0].bottomTile);
+                                    tempDictionary.Add(tempTile.transform.position, tempTile);
+                                    tempList.Add(tempTile);
                                 }
                             }
                             tempList.RemoveAt(0);
@@ -198,29 +194,6 @@ namespace DTS.Woodworm
 
             CheckFall();
         }
-        public void GetNeighborTile(TileControl tile)
-        {
-            Vector3 pos = tile.transform.position + Vector3.left;
-            if (chunk[0].ContainsKey(pos))
-            {
-                tile.leftTile = chunk[0][pos];
-            }
-            pos = tile.transform.position + Vector3.right;
-            if (chunk[0].ContainsKey(pos))
-            {
-                tile.rightTile = chunk[0][pos];
-            }
-            pos = tile.transform.position + Vector3.up;
-            if (chunk[0].ContainsKey(pos))
-            {
-                tile.topTile = chunk[0][pos];
-            }
-            pos = tile.transform.position + Vector3.down;
-            if (chunk[0].ContainsKey(pos))
-            {
-                tile.bottomTile = chunk[0][pos];
-            }
-        }
 
         int fallChunk = -1;
         public void CheckFall()
@@ -231,7 +204,7 @@ namespace DTS.Woodworm
                 isFall = true;
                 foreach (var key in map)
                 {
-                    if (!key.Value.bottomTile && (mapBlockHolder.ContainsKey(key.Key + Vector2.down) || key.Key.y < 1))
+                    if (!map.ContainsKey(key.Key + Vector2.down) && (mapBlockHolder.ContainsKey(key.Key + Vector2.down) || key.Key.y < 1))
                     {
                         isFall = false;
                         break;

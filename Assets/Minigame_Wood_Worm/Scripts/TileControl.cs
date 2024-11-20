@@ -8,7 +8,6 @@ namespace DTS.Woodworm
     public class TileControl : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer;
-        public TileControl leftTile, rightTile, topTile, bottomTile;
         public Vector3Int pos;
 
         public void Setup()

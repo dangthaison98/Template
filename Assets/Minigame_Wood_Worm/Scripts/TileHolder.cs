@@ -35,10 +35,6 @@ namespace DTS.Woodworm
             {
                 tile.Setup();
             }
-            foreach (TileControl tile in tiles)
-            {
-                GameManager.Instance.GetNeighborTile(tile);
-            }
 
             GameManager.Instance.OnAutoTile?.Invoke();
         }
