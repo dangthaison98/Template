@@ -33,10 +33,10 @@ namespace DTS.Woodworm
         }
         private void Update()
         {
-            if(!canControl) return;
-
-            GetInputPC();
             MoveInGrid();
+
+            if(canControl)
+                GetInputPC();
         }
 
         void GetInputPC()

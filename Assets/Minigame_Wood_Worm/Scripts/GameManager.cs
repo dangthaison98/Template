@@ -224,8 +224,11 @@ namespace DTS.Woodworm
                 if (isFall)
                 {
                     fallChunk = chunk.IndexOf(map);
+                    PlayerControl.instance.canControl = false;
                     return;
                 }
+
+                PlayerControl.instance.canControl = true;
             }
 
             CheckWin();
