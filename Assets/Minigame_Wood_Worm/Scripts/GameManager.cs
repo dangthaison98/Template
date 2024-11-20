@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 namespace DTS.Woodworm
@@ -52,6 +53,10 @@ namespace DTS.Woodworm
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Load();
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   
             }
 
             if (fallChunk >= 0)
