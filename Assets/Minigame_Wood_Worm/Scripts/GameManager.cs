@@ -298,8 +298,8 @@ namespace DTS.Woodworm
             SaveData saveData = new SaveData();
             saveData.wormDirection = PlayerControl.instance.faceDirection;
             saveData.headPos = PlayerControl.instance.transform.position;
-            saveData.bodyPos = PlayerControl.instance.body.position;
-            saveData.tailPos = PlayerControl.instance.tail.position;
+            saveData.bodyPos = PlayerControl.instance.body.transform.position;
+            saveData.tailPos = PlayerControl.instance.tail.transform.position;
             saveData.tiles = new List<TileControl>(tileHolder.tiles);
             saveData.chunk = new List<Dictionary<Vector2, TileControl>>(chunk.Count);
             chunk.ForEach((item) =>
@@ -317,8 +317,8 @@ namespace DTS.Woodworm
 
             PlayerControl.instance.faceDirection = saveData.wormDirection;
             PlayerControl.instance.transform.position = saveData.headPos;
-            PlayerControl.instance.body.position = saveData.bodyPos;
-            PlayerControl.instance.tail.position = saveData.tailPos;
+            PlayerControl.instance.body.transform.position = saveData.bodyPos;
+            PlayerControl.instance.tail.transform.position = saveData.tailPos;
             tileHolder.tiles = saveData.tiles;
             chunk = saveData.chunk;
 
