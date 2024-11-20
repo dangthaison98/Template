@@ -35,6 +35,7 @@ namespace DTS.Woodworm
         public TileBase tileBase;
         public Action OnAutoTile;
 
+        private List<SaveData> saveDatas = new List<SaveData>();
 
         public void InitTile(TileControl tile, int count)
         {
@@ -48,6 +49,11 @@ namespace DTS.Woodworm
         bool isDoneFall;
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Load();
+            }
+
             if (fallChunk >= 0)
             {
                 isDoneFall = true;
@@ -103,8 +109,7 @@ namespace DTS.Woodworm
                     }
                     tileHolder.tiles.Remove(map[pos]);
                     getSpriteTilemap.SetTile(map[pos].pos, null);
-                    OnAutoTile -= map[pos].AutoTile;
-                    Destroy(map[pos].gameObject);
+                    map[pos].gameObject.SetActive(false);
                     map.Remove(pos);
                     OnAutoTile?.Invoke();
 
@@ -272,5 +277,55 @@ namespace DTS.Woodworm
                 }
             }
         }
+
+        public void Save()
+        {
+            SaveData saveData = new SaveData();
+            saveData.headPos = PlayerControl.instance.transform.position;
+            saveData.bodyPos = PlayerControl.instance.body.position;
+            saveData.tailPos = PlayerControl.instance.tail.position;
+            saveData.tiles = new List<TileControl>(tileHolder.tiles);
+            saveData.chunk = new List<Dictionary<Vector2, TileControl>>(chunk);
+
+            saveDatas.Add(saveData);
+        }
+        void Load()
+        {
+            if (saveDatas.Count == 0) return;
+
+            SaveData saveData = saveDatas.Last();
+
+            PlayerControl.instance.transform.position = saveData.headPos;
+            PlayerControl.instance.body.position = saveData.bodyPos;
+            PlayerControl.instance.tail.position = saveData.tailPos;
+            tileHolder.tiles = saveData.tiles;
+            chunk = saveData.chunk;
+
+            saveDatas.Remove(saveData);
+
+            foreach (var map in chunk)
+            {
+                foreach(var key in map)
+                {
+                    key.Value.transform.position = key.Key;
+                }
+            }
+            foreach(var tile in tileHolder.tiles)
+            {
+                tile.gameObject.SetActive(true);
+                getSpriteTilemap.SetTile(tile.pos, tileBase);
+            }
+            OnAutoTile?.Invoke();
+        }
+    }
+
+    [System.Serializable]
+    public class SaveData
+    {
+        public Vector3 headPos;
+        public Vector3 bodyPos;
+        public Vector3 tailPos;
+        public List<TileControl> tiles = new List<TileControl>();
+        public List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
     }
 }

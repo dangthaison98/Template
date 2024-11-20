@@ -85,6 +85,7 @@ namespace DTS.Woodworm
                     {
                         if(Physics2D.Raycast(transform.position, Vector2.left, 1, groundLayer)) return;
 
+                        GameManager.Instance.Save();
                         movement.Add(transform.position + Vector3.left);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.position;
@@ -96,6 +97,7 @@ namespace DTS.Woodworm
                     {
                         if (Physics2D.Raycast(transform.position, Vector2.right, 1, groundLayer)) return;
 
+                        GameManager.Instance.Save();
                         movement.Add(transform.position + Vector3.right);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.position;
@@ -107,6 +109,7 @@ namespace DTS.Woodworm
                     {
                         if (Physics2D.Raycast(transform.position, Vector2.up, 1, groundLayer)) return;
 
+                        GameManager.Instance.Save();
                         movement.Add(transform.position + Vector3.up);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.position;
@@ -118,6 +121,7 @@ namespace DTS.Woodworm
                     {
                         if (Physics2D.Raycast(transform.position, Vector2.down, 1, groundLayer)) return;
 
+                        GameManager.Instance.Save();
                         movement.Add(transform.position + Vector3.down);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.position;

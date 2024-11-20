@@ -21,6 +21,8 @@ namespace DTS.Woodworm
         }
         public void AutoTile()
         {
+            if (!gameObject.activeSelf) return;
+
             spriteRenderer.sprite = GameManager.Instance.getSpriteTilemap.GetSprite(pos);
             if(GameManager.Instance.getSpriteTilemap.GetTransformMatrix(pos).m00 == -1)
             {
