@@ -88,21 +88,21 @@ namespace DTS.Woodworm
                 if (map.ContainsKey(pos))
                 {
                     TileControl tempTile = null;
-                    if (mapBlockHolder.ContainsKey(pos + Vector3.left))
+                    if (map.ContainsKey(pos + Vector3.left))
                     {
-                        tempTile = mapBlockHolder[pos + Vector3.left];
+                        tempTile = map[pos + Vector3.left];
                     }
-                    else if (mapBlockHolder.ContainsKey(pos + Vector3.right))
+                    else if (map.ContainsKey(pos + Vector3.right))
                     {
-                        tempTile = mapBlockHolder[pos + Vector3.right];
+                        tempTile = map[pos + Vector3.right];
                     }
-                    else if (mapBlockHolder.ContainsKey(pos + Vector3.up))
+                    else if (map.ContainsKey(pos + Vector3.up))
                     {
-                        tempTile = mapBlockHolder[pos + Vector3.up];
+                        tempTile = map[pos + Vector3.up];
                     }
-                    else if (mapBlockHolder.ContainsKey(pos + Vector3.down))
+                    else if (map.ContainsKey(pos + Vector3.down))
                     {
-                        tempTile = mapBlockHolder[pos + Vector3.down];
+                        tempTile = map[pos + Vector3.down];
                     }
                     tileHolder.tiles.Remove(map[pos]);
                     getSpriteTilemap.SetTile(map[pos].pos, null);
