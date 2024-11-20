@@ -50,13 +50,13 @@ namespace DTS.Woodworm
         bool isDoneFall;
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Undo();
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   
+                Restart();
             }
 
             if (fallChunk >= 0)
