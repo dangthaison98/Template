@@ -52,7 +52,7 @@ namespace DTS.Woodworm
         {
             if (Input.GetKeyDown(KeyCode.L))
             {
-                Load();
+                Undo();
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -286,6 +286,10 @@ namespace DTS.Woodworm
             }
         }
 
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         public void Save()
         {
             SaveData saveData = new SaveData();
@@ -301,7 +305,7 @@ namespace DTS.Woodworm
 
             saveDatas.Add(saveData);
         }
-        void Load()
+        public void Undo()
         {
             if (saveDatas.Count == 0) return;
 
