@@ -247,6 +247,7 @@ namespace DTS.Woodworm
 
             CheckWin();
         }
+        bool isWin;
         void CheckWin()
         {
             if(tileHolder.tiles.Count == tileHolder.countDemoBlock)
@@ -273,9 +274,9 @@ namespace DTS.Woodworm
                     }
                 }
 
-                //Win
+                if(isWin) return;
+                isWin = true;
                 PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-
                 PlayerControl.instance.canControl = false;
                 tileIndex = 0;
                 foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
