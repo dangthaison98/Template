@@ -28,7 +28,6 @@ namespace DTS.Woodworm
 
         [HideInInspector] public TileHolder tileHolder;
 
-        Dictionary<Vector2, TileControl> mapBlockHolder = new Dictionary<Vector2, TileControl>();
         List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
 
 
@@ -39,7 +38,6 @@ namespace DTS.Woodworm
 
         public void InitTile(TileControl tile, int count)
         {
-            mapBlockHolder.Add(tile.transform.position, tile);
             if (chunk.Count == 0)
             {
                 chunk.Add(new Dictionary<Vector2, TileControl>());
@@ -64,7 +62,6 @@ namespace DTS.Woodworm
 
                 if (isDoneFall)
                 {
-                    mapBlockHolder.Clear();
                     for (int i = 0; i < chunk.Count; i++)
                     {
                         TileControl[] tempTileList = chunk[i].Values.ToArray();
@@ -109,7 +106,6 @@ namespace DTS.Woodworm
                     OnAutoTile -= map[pos].AutoTile;
                     Destroy(map[pos].gameObject);
                     map.Remove(pos);
-                    mapBlockHolder.Remove(pos);
                     OnAutoTile?.Invoke();
 
                     if(map.Count == 0)
@@ -204,7 +200,7 @@ namespace DTS.Woodworm
                 isFall = true;
                 foreach (var key in map)
                 {
-                    if (!map.ContainsKey(key.Key + Vector2.down) && (mapBlockHolder.ContainsKey(key.Key + Vector2.down) || key.Key.y < 1))
+                    if (!map.ContainsKey(key.Key + Vector2.down) && (Physics2D.Raycast(key.Key + Vector2.down, Vector2.down, 0.1f) || key.Key.y < 1))
                     {
                         isFall = false;
                         break;
@@ -231,7 +227,7 @@ namespace DTS.Woodworm
         }
         void CheckWin()
         {
-            if(mapBlockHolder.Count == tileHolder.countDemoBlock)
+            if(tileHolder.tiles.Count == tileHolder.countDemoBlock)
             {
                 int tileIndex = 0;
                 Vector3 lockDemoPos = Vector3.zero;
