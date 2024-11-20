@@ -31,6 +31,7 @@ namespace DTS.Woodworm
 
         List<Dictionary<Vector2, TileControl>> chunk = new List<Dictionary<Vector2, TileControl>>();
 
+        public LevelData levelData;
 
         public Tilemap getSpriteTilemap;
         public TileBase tileBase;
@@ -45,6 +46,11 @@ namespace DTS.Woodworm
                 chunk.Add(new Dictionary<Vector2, TileControl>());
             }
             chunk[count].Add(tile.transform.position, tile);
+        }
+
+        private void Awake()
+        {
+            
         }
 
         bool isDoneFall;
