@@ -285,7 +285,11 @@ namespace DTS.Woodworm
             saveData.bodyPos = PlayerControl.instance.body.position;
             saveData.tailPos = PlayerControl.instance.tail.position;
             saveData.tiles = new List<TileControl>(tileHolder.tiles);
-            saveData.chunk = new List<Dictionary<Vector2, TileControl>>(chunk);
+            saveData.chunk = new List<Dictionary<Vector2, TileControl>>(chunk.Count);
+            chunk.ForEach((item) =>
+            {
+                saveData.chunk.Add(new Dictionary<Vector2, TileControl>(item));
+            });
 
             saveDatas.Add(saveData);
         }
