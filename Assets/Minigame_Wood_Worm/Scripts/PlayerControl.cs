@@ -174,7 +174,16 @@ namespace DTS.Woodworm
         bool isFall;
         void CheckFall()
         {
-            if(!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
+            if (Physics2D.Raycast(mount.transform.position, mount.transform.right, 1))
+            {
+                mount.sprite = mountOpen;
+            }
+            else
+            {
+                mount.sprite = mountClose;
+            }
+
+            if (!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
             {
                 if(Physics2D.Raycast(transform.position, Vector2.down, 1) 
                     || Physics2D.Raycast(body.transform.position, Vector2.down, 1) 
