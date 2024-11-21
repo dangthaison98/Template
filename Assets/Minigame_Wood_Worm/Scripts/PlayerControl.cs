@@ -14,8 +14,8 @@ namespace DTS.Woodworm
         public SpriteRenderer head;
         public Transform body;
         public SpriteRenderer tail;
-        public Transform rotateHead;
-        public Transform rotateTail;
+        public Transform headDirection;
+        public Transform tailDirection;
 
         [Header("Layer")]
         public LayerMask groundLayer;
@@ -65,10 +65,17 @@ namespace DTS.Woodworm
             if (movement.Count > 0)
             {
                 transform.position = Vector2.MoveTowards(transform.position, movement[0], 15 * Time.deltaTime);
-                body.transform.position = Vector2.MoveTowards(body.transform.position, currentHeadPos, 15 * Time.deltaTime);
-                tail.transform.position = Vector2.MoveTowards(tail.transform.position, currentBodyPos, 15 * Time.deltaTime);
+
+                if (isFall)
+                {
+                    headDirection.transform.parent.position = transform.position;
+                    body.transform.position = Vector2.MoveTowards(body.transform.position, currentHeadPos, 15 * Time.deltaTime);
+                    tail.transform.position = Vector2.MoveTowards(tail.transform.position, currentBodyPos, 15 * Time.deltaTime);
+                }
+
                 if (transform.position == movement[0])
                 {
+                    isFall = false;
                     movement.RemoveAt(0);
                     CheckFall();
                 }
@@ -90,8 +97,11 @@ namespace DTS.Woodworm
                         movement.Add(transform.position + Vector3.left);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
+                        headDirection.parent.transform.position = movement[0];
+                        body.transform.position = currentHeadPos;
+                        tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Left;
-                        rotateHead.eulerAngles = new Vector3(0,0,180);
+                        headDirection.parent.eulerAngles = new Vector3(0,0,180);
                         CheckSprite();
                     }
                     break;
@@ -104,8 +114,11 @@ namespace DTS.Woodworm
                         movement.Add(transform.position + Vector3.right);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
+                        headDirection.parent.transform.position = movement[0];
+                        body.transform.position = currentHeadPos;
+                        tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Right;
-                        rotateHead.eulerAngles = new Vector3(0, 0, 0);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, 0);
                         CheckSprite();
                     }
                     break;
@@ -118,8 +131,11 @@ namespace DTS.Woodworm
                         movement.Add(transform.position + Vector3.up);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
+                        headDirection.parent.transform.position = movement[0];
+                        body.transform.position = currentHeadPos;
+                        tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Up;
-                        rotateHead.eulerAngles = new Vector3(0, 0, 90);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, 90);
                         CheckSprite();
                     }
                     break;
@@ -132,8 +148,11 @@ namespace DTS.Woodworm
                         movement.Add(transform.position + Vector3.down);
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
+                        headDirection.parent.transform.position = movement[0];
+                        body.transform.position = currentHeadPos;
+                        tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Down;
-                        rotateHead.eulerAngles = new Vector3(0, 0, -90);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, -90);
                         CheckSprite();
                     }
                     break;
@@ -144,6 +163,7 @@ namespace DTS.Woodworm
         }
 
         private Vector2 boxCheck = new Vector2(1.2f, 0.1f);
+        bool isFall;
         void CheckFall()
         {
             if(!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
@@ -155,6 +175,7 @@ namespace DTS.Woodworm
                     return;
                 }
 
+                isFall = true;
                 movement.Add(transform.position + Vector3.down);
                 currentHeadPos = body.transform.position + Vector3.down;
                 currentBodyPos = tail.transform.position + Vector3.down;
@@ -186,22 +207,22 @@ namespace DTS.Woodworm
             if (dir == Vector3.right)
             {
                 tail.sprite = tailSprite[0];
-                rotateTail.eulerAngles = new Vector3(0, 0, 0);
+                tailDirection.parent.eulerAngles = new Vector3(0, 0, 0);
             }
             else if (dir == Vector3.left)
             {
                 tail.sprite = tailSprite[1];
-                rotateTail.eulerAngles = new Vector3(0, 0, 180);
+                tailDirection.parent.eulerAngles = new Vector3(0, 0, 180);
             }
             else if (dir == Vector3.up)
             {
                 tail.sprite = tailSprite[2];
-                rotateTail.eulerAngles = new Vector3(0, 0, 90);
+                tailDirection.parent.eulerAngles = new Vector3(0, 0, 90);
             }
             else if (dir == Vector3.down)
             {
                 tail.sprite = tailSprite[3];
-                rotateTail.eulerAngles = new Vector3(0, 0, -90);
+                tailDirection.parent.eulerAngles = new Vector3(0, 0, -90);
             }
         }
         public int GetSpriteIndex(int bodyPart)
@@ -215,10 +236,20 @@ namespace DTS.Woodworm
             }
             return 0;
         }
-        public void UpdateSprite(int headIndex, int tailIndex)
+        public void UpdatePlayer(SaveData saveData)
         {
-            head.sprite = headSprite[headIndex];
-            tail.sprite = tailSprite[tailIndex];
+            faceDirection = saveData.wormDirection;
+
+            head.sprite = headSprite[saveData.headIndex];
+            tail.sprite = tailSprite[saveData.tailIndex];
+
+            headDirection.transform.parent.position = saveData.headPos;
+            headDirection.transform.parent.rotation = saveData.headDir;
+            tailDirection.transform.parent.rotation = saveData.tailDir;
+
+            transform.position = saveData.headPos;
+            body.transform.position = saveData.bodyPos;
+            tail.transform.position = saveData.tailPos;
         }
     }
 

@@ -301,6 +301,9 @@ namespace DTS.Woodworm
             saveData.headIndex = PlayerControl.instance.GetSpriteIndex(0);
             saveData.tailIndex = PlayerControl.instance.GetSpriteIndex(1);
 
+            saveData.headDir = PlayerControl.instance.headDirection.transform.parent.rotation;
+            saveData.tailDir = PlayerControl.instance.tailDirection.transform.parent.rotation;
+
             saveData.headPos = PlayerControl.instance.transform.position;
             saveData.bodyPos = PlayerControl.instance.body.transform.position;
             saveData.tailPos = PlayerControl.instance.tail.transform.position;
@@ -319,13 +322,8 @@ namespace DTS.Woodworm
 
             SaveData saveData = saveDatas.Last();
 
-            PlayerControl.instance.faceDirection = saveData.wormDirection;
+            PlayerControl.instance.UpdatePlayer(saveData);
 
-            PlayerControl.instance.UpdateSprite(saveData.headIndex, saveData.tailIndex);
-
-            PlayerControl.instance.transform.position = saveData.headPos;
-            PlayerControl.instance.body.transform.position = saveData.bodyPos;
-            PlayerControl.instance.tail.transform.position = saveData.tailPos;
             tileHolder.tiles = saveData.tiles;
             chunk = saveData.chunk;
 
@@ -351,7 +349,10 @@ namespace DTS.Woodworm
     public class SaveData
     {
         public Direction wormDirection;
+
         public int headIndex, tailIndex;
+        public Quaternion headDir, tailDir;
+
         public Vector3 headPos;
         public Vector3 bodyPos;
         public Vector3 tailPos;
