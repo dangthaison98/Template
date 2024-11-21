@@ -289,6 +289,7 @@ namespace DTS.Woodworm
             }
         }
 
+        #region Save Load
         public void Restart()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -322,7 +323,7 @@ namespace DTS.Woodworm
 
             SaveData saveData = saveDatas.Last();
 
-            PlayerControl.instance.UpdatePlayer(saveData);
+            PlayerControl.instance.UndoPlayer(saveData);
 
             tileHolder.tiles = saveData.tiles;
             chunk = saveData.chunk;
@@ -343,6 +344,7 @@ namespace DTS.Woodworm
             }
             OnAutoTile?.Invoke();
         }
+        #endregion
     }
 
     [System.Serializable]

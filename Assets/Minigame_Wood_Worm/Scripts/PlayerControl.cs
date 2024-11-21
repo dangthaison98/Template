@@ -244,7 +244,7 @@ namespace DTS.Woodworm
             }
             return 0;
         }
-        public void UpdatePlayer(SaveData saveData)
+        public void UndoPlayer(SaveData saveData)
         {
             faceDirection = saveData.wormDirection;
 
