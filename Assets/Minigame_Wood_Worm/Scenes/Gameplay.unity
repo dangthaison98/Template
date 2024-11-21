@@ -692,10 +692,10 @@ MonoBehaviour:
   - {fileID: -402955447, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
   - {fileID: -1398756340, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
   tailSprite:
-  - {fileID: 1524803067, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
-  - {fileID: -901804282, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
-  - {fileID: 700562963, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
-  - {fileID: -17602715, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
+  - {fileID: -2078936254, guid: 0622fdab1eb107046a9f6a7441c7fc37, type: 3}
+  - {fileID: -472314440, guid: 0622fdab1eb107046a9f6a7441c7fc37, type: 3}
+  - {fileID: -1437659420, guid: 0622fdab1eb107046a9f6a7441c7fc37, type: 3}
+  - {fileID: 1578537327, guid: 0622fdab1eb107046a9f6a7441c7fc37, type: 3}
 --- !u!1 &623712772
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +970,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1524803067, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
+  m_Sprite: {fileID: -2078936254, guid: 0622fdab1eb107046a9f6a7441c7fc37, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
@@ -1038,7 +1038,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1524803067, guid: 04ef052b7af5866459ec1d2fcf5f0c0b, type: 3}
+  m_Sprite: {fileID: -2078936254, guid: 0622fdab1eb107046a9f6a7441c7fc37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
