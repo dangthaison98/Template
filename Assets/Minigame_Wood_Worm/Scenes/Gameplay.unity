@@ -755,7 +755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canControl: 1
   head: {fileID: 527870749}
-  headRotate: {fileID: 871848751}
+  mount: {fileID: 412737675}
   body: {fileID: 1826680620}
   tail: {fileID: 756741868}
   headDirection: {fileID: 166125565}

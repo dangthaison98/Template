@@ -98,6 +98,7 @@ namespace DTS.Woodworm
             }
         }
 
+        #region Tile Control
         public void DestroyTile(Vector3 pos)
         {
             foreach (var map in chunk)
@@ -288,6 +289,7 @@ namespace DTS.Woodworm
                 }
             }
         }
+        #endregion
 
         #region Save Load
         public void Restart()
