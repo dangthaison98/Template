@@ -187,7 +187,7 @@ namespace DTS.Woodworm
             {
                 body.sprite = bodySprite[3];
             }
-            else if(dir.x == 2)
+            else if(Mathf.Abs(dir.x) == 2)
             {
                 body.sprite = bodySprite[1];
             }
