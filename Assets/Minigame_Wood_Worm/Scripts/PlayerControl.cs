@@ -194,14 +194,7 @@ namespace DTS.Woodworm
         bool isFall;
         void CheckFall()
         {
-            if (Physics2D.Raycast(mount.transform.position, mount.transform.right, 1, LayerMask.GetMask("Water")))
-            {
-                mount.sprite = mountOpen;
-            }
-            else
-            {
-                mount.sprite = mountClose;
-            }
+            mount.sprite = mountOpen;
 
             if (!Physics2D.OverlapBox(body.transform.position, boxCheck, 0))
             {
