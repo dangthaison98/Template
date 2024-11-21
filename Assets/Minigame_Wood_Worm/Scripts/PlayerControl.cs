@@ -65,9 +65,9 @@ namespace DTS.Woodworm
         {
             if (movement.Count > 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, movement[0], 20 * Time.deltaTime);
-                body.transform.position = Vector2.MoveTowards(body.transform.position, currentHeadPos, 20 * Time.deltaTime);
-                tail.transform.position = Vector2.MoveTowards(tail.transform.position, currentBodyPos, 20 * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, movement[0], 15 * Time.deltaTime);
+                body.transform.position = Vector2.MoveTowards(body.transform.position, currentHeadPos, 15 * Time.deltaTime);
+                tail.transform.position = Vector2.MoveTowards(tail.transform.position, currentBodyPos, 15 * Time.deltaTime);
                 if (transform.position == movement[0])
                 {
                     movement.RemoveAt(0);
