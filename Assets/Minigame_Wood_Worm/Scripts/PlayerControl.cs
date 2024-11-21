@@ -182,10 +182,22 @@ namespace DTS.Woodworm
             if (dir.x == -1 && dir.y > 0 && currentHeadPos.y > currentBodyPos.y)
             {
                 body.sprite = bodySprite[2];
+                body.flipY = false;
             }
             else if(dir.x == 1 && dir.y > 0 && currentHeadPos.y > currentBodyPos.y)
             {
                 body.sprite = bodySprite[3];
+                body.flipY = false;
+            }
+            else if (dir.x == -1 && dir.y > 0 && currentHeadPos.y == currentBodyPos.y)
+            {
+                body.sprite = bodySprite[3];
+                body.flipY = true;
+            }
+            else if (dir.x == 1 && dir.y > 0 && currentHeadPos.y == currentBodyPos.y)
+            {
+                body.sprite = bodySprite[2];
+                body.flipY = true;
             }
             else if(Mathf.Abs(dir.x) == 2)
             {
