@@ -179,25 +179,25 @@ namespace DTS.Woodworm
             //Body
             Vector3 headPos = movement.Count > 0 ? movement[0] : transform.position;
             Vector3 dir = headPos - currentBodyPos;
-            if (dir.x == -1 && dir.y > 0 && currentHeadPos.y > currentBodyPos.y)
+            if (dir.x == -1 && currentHeadPos.y != currentBodyPos.y)
             {
                 body.sprite = bodySprite[2];
-                body.flipY = false;
+                body.flipY = dir.y < 0;
             }
-            else if(dir.x == 1 && dir.y > 0 && currentHeadPos.y > currentBodyPos.y)
+            else if(dir.x == 1 && currentHeadPos.y != currentBodyPos.y)
             {
                 body.sprite = bodySprite[3];
-                body.flipY = false;
+                body.flipY = dir.y < 0;
             }
-            else if (dir.x == -1 && dir.y > 0 && currentHeadPos.y == currentBodyPos.y)
+            else if (dir.x == -1 && currentHeadPos.y == currentBodyPos.y)
             {
                 body.sprite = bodySprite[3];
-                body.flipY = true;
+                body.flipY = dir.y > 0;
             }
-            else if (dir.x == 1 && dir.y > 0 && currentHeadPos.y == currentBodyPos.y)
+            else if (dir.x == 1 && currentHeadPos.y == currentBodyPos.y)
             {
                 body.sprite = bodySprite[2];
-                body.flipY = true;
+                body.flipY = dir.y > 0;
             }
             else if(Mathf.Abs(dir.x) == 2)
             {
