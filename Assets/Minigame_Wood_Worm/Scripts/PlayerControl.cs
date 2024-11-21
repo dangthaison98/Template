@@ -12,6 +12,7 @@ namespace DTS.Woodworm
 
         [Header("Part")]
         public SpriteRenderer head;
+        public Transform headRotate;
         public Transform body;
         public SpriteRenderer tail;
         public Transform headDirection;
@@ -101,6 +102,7 @@ namespace DTS.Woodworm
                         body.transform.position = currentHeadPos;
                         tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Left;
+                        headRotate.eulerAngles = new Vector3(0, 0, 180);
                         headDirection.parent.eulerAngles = new Vector3(0,0,180);
                         CheckSprite();
                     }
@@ -118,6 +120,7 @@ namespace DTS.Woodworm
                         body.transform.position = currentHeadPos;
                         tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Right;
+                        headRotate.eulerAngles = new Vector3(0, 0, 0);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, 0);
                         CheckSprite();
                     }
@@ -135,6 +138,7 @@ namespace DTS.Woodworm
                         body.transform.position = currentHeadPos;
                         tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Up;
+                        headRotate.eulerAngles = new Vector3(0, 0, 90);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, 90);
                         CheckSprite();
                     }
@@ -152,6 +156,7 @@ namespace DTS.Woodworm
                         body.transform.position = currentHeadPos;
                         tail.transform.position = currentBodyPos;
                         faceDirection = Direction.Down;
+                        headRotate.eulerAngles = new Vector3(0, 0, -90);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, -90);
                         CheckSprite();
                     }
@@ -244,6 +249,7 @@ namespace DTS.Woodworm
             tail.sprite = tailSprite[saveData.tailIndex];
 
             headDirection.transform.parent.position = saveData.headPos;
+            headRotate.rotation = saveData.headDir;
             headDirection.transform.parent.rotation = saveData.headDir;
             tailDirection.transform.parent.rotation = saveData.tailDir;
 
