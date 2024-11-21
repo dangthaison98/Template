@@ -287,6 +287,8 @@ namespace DTS.Woodworm
                         tileHolder.tiles[i].spriteRenderer.flipX = false;
                     }
                 }
+
+                Invoke(nameof(Restart), 2);
             }
         }
         #endregion
