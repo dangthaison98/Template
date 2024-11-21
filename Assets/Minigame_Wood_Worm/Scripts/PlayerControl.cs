@@ -14,6 +14,8 @@ namespace DTS.Woodworm
         public SpriteRenderer head;
         public SpriteRenderer body;
         public SpriteRenderer tail;
+        public Transform rotateHead;
+        public Transform rotateTail;
 
         [Header("Layer")]
         public LayerMask groundLayer;
@@ -90,6 +92,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Left;
+                        rotateHead.eulerAngles = new Vector3(0,0,180);
                         CheckSprite();
                     }
                     break;
@@ -103,6 +106,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Right;
+                        rotateHead.eulerAngles = new Vector3(0, 0, 0);
                         CheckSprite();
                     }
                     break;
@@ -116,6 +120,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Up;
+                        rotateHead.eulerAngles = new Vector3(0, 0, 90);
                         CheckSprite();
                     }
                     break;
@@ -129,6 +134,7 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         faceDirection = Direction.Down;
+                        rotateHead.eulerAngles = new Vector3(0, 0, -90);
                         CheckSprite();
                     }
                     break;
@@ -213,18 +219,22 @@ namespace DTS.Woodworm
             if (dir == Vector3.right)
             {
                 tail.sprite = tailSprite[0];
+                rotateTail.eulerAngles = new Vector3(0, 0, 0);
             }
             else if (dir == Vector3.left)
             {
                 tail.sprite = tailSprite[1];
+                rotateTail.eulerAngles = new Vector3(0, 0, 180);
             }
             else if (dir == Vector3.up)
             {
                 tail.sprite = tailSprite[2];
+                rotateTail.eulerAngles = new Vector3(0, 0, 90);
             }
             else if (dir == Vector3.down)
             {
                 tail.sprite = tailSprite[3];
+                rotateTail.eulerAngles = new Vector3(0, 0, -90);
             }
         }
         public int GetSpriteIndex(int bodyPart)
