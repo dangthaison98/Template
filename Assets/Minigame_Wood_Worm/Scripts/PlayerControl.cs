@@ -12,7 +12,7 @@ namespace DTS.Woodworm
 
         [Header("Part")]
         public SpriteRenderer head;
-        public SpriteRenderer body;
+        public Transform body;
         public SpriteRenderer tail;
         public Transform rotateHead;
         public Transform rotateTail;
@@ -26,7 +26,6 @@ namespace DTS.Woodworm
         [HideInInspector] public Vector3 currentBodyPos;
 
         public List<Sprite> headSprite = new List<Sprite>();
-        public List<Sprite> bodySprite = new List<Sprite>();
         public List<Sprite> tailSprite = new List<Sprite>();
 
         private void Awake()
@@ -182,40 +181,8 @@ namespace DTS.Woodworm
                     break;
             }
 
-            //Body
-            Vector3 headPos = movement.Count > 0 ? movement[0] : transform.position;
-            Vector3 dir = headPos - currentBodyPos;
-            if (dir.x == -1 && currentHeadPos.y != currentBodyPos.y)
-            {
-                body.sprite = bodySprite[2];
-                body.flipY = dir.y < 0;
-            }
-            else if(dir.x == 1 && currentHeadPos.y != currentBodyPos.y)
-            {
-                body.sprite = bodySprite[3];
-                body.flipY = dir.y < 0;
-            }
-            else if (dir.x == -1 && currentHeadPos.y == currentBodyPos.y)
-            {
-                body.sprite = bodySprite[3];
-                body.flipY = dir.y > 0;
-            }
-            else if (dir.x == 1 && currentHeadPos.y == currentBodyPos.y)
-            {
-                body.sprite = bodySprite[2];
-                body.flipY = dir.y > 0;
-            }
-            else if(Mathf.Abs(dir.x) == 2)
-            {
-                body.sprite = bodySprite[1];
-            }
-            else
-            {
-                body.sprite = bodySprite[0];
-            }
-
             //Tail
-            dir = currentHeadPos - currentBodyPos;
+            Vector3 dir = currentHeadPos - currentBodyPos;
             if (dir == Vector3.right)
             {
                 tail.sprite = tailSprite[0];
@@ -244,21 +211,13 @@ namespace DTS.Woodworm
                 case 0:
                     return headSprite.IndexOf(head.sprite);
                 case 1:
-                    return bodySprite.IndexOf(body.sprite);
-                case 2:
                     return tailSprite.IndexOf(tail.sprite);
             }
             return 0;
         }
-        public bool IsFlip()
-        {
-            return body.flipY;
-        }
-        public void UpdateSprite(int headIndex, int bodyIndex, int tailIndex, bool isFlip)
+        public void UpdateSprite(int headIndex, int tailIndex)
         {
             head.sprite = headSprite[headIndex];
-            body.sprite = bodySprite[bodyIndex];
-            body.flipY = isFlip;
             tail.sprite = tailSprite[tailIndex];
         }
     }
