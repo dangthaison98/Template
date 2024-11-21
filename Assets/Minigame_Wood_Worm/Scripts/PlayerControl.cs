@@ -26,6 +26,9 @@ namespace DTS.Woodworm
         [HideInInspector] public Vector3 currentHeadPos;
         [HideInInspector] public Vector3 currentBodyPos;
 
+        [Header("Sprite")]
+        public Sprite mountOpen;
+        public Sprite mountClose;
         public List<Sprite> headSprite = new List<Sprite>();
         public List<Sprite> tailSprite = new List<Sprite>();
 
