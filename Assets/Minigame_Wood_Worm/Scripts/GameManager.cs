@@ -297,6 +297,12 @@ namespace DTS.Woodworm
         {
             SaveData saveData = new SaveData();
             saveData.wormDirection = PlayerControl.instance.faceDirection;
+
+            saveData.headIndex = PlayerControl.instance.GetSpriteIndex(0);
+            saveData.bodyIndex = PlayerControl.instance.GetSpriteIndex(1);
+            saveData.tailIndex = PlayerControl.instance.GetSpriteIndex(2);
+            saveData.isFlip = PlayerControl.instance.IsFlip();
+
             saveData.headPos = PlayerControl.instance.transform.position;
             saveData.bodyPos = PlayerControl.instance.body.transform.position;
             saveData.tailPos = PlayerControl.instance.tail.transform.position;
@@ -316,6 +322,9 @@ namespace DTS.Woodworm
             SaveData saveData = saveDatas.Last();
 
             PlayerControl.instance.faceDirection = saveData.wormDirection;
+
+            PlayerControl.instance.UpdateSprite(saveData.headIndex, saveData.bodyIndex, saveData.tailIndex, saveData.isFlip);
+
             PlayerControl.instance.transform.position = saveData.headPos;
             PlayerControl.instance.body.transform.position = saveData.bodyPos;
             PlayerControl.instance.tail.transform.position = saveData.tailPos;
@@ -344,6 +353,8 @@ namespace DTS.Woodworm
     public class SaveData
     {
         public Direction wormDirection;
+        public int headIndex, bodyIndex, tailIndex;
+        public bool isFlip;
         public Vector3 headPos;
         public Vector3 bodyPos;
         public Vector3 tailPos;

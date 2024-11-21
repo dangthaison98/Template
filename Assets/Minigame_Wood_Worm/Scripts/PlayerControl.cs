@@ -23,9 +23,9 @@ namespace DTS.Woodworm
         [HideInInspector] public Vector3 currentHeadPos;
         [HideInInspector] public Vector3 currentBodyPos;
 
-        public Sprite[] headSprite;
-        public Sprite[] bodySprite;
-        public Sprite[] tailSprite;
+        public List<Sprite> headSprite = new List<Sprite>();
+        public List<Sprite> bodySprite = new List<Sprite>();
+        public List<Sprite> tailSprite = new List<Sprite>();
 
         private void Awake()
         {
@@ -226,6 +226,30 @@ namespace DTS.Woodworm
             {
                 tail.sprite = tailSprite[3];
             }
+        }
+        public int GetSpriteIndex(int bodyPart)
+        {
+            switch (bodyPart)
+            {
+                case 0:
+                    return headSprite.IndexOf(head.sprite);
+                case 1:
+                    return bodySprite.IndexOf(body.sprite);
+                case 2:
+                    return tailSprite.IndexOf(tail.sprite);
+            }
+            return 0;
+        }
+        public bool IsFlip()
+        {
+            return body.flipY;
+        }
+        public void UpdateSprite(int headIndex, int bodyIndex, int tailIndex, bool isFlip)
+        {
+            head.sprite = headSprite[headIndex];
+            body.sprite = bodySprite[bodyIndex];
+            body.flipY = isFlip;
+            tail.sprite = tailSprite[tailIndex];
         }
     }
 
