@@ -108,6 +108,11 @@ namespace DTS.Woodworm
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, 180);
                         headDirection.parent.eulerAngles = new Vector3(0,0,180);
                         CheckSprite();
+
+                        if(mount.sprite == mountOpen)
+                        {
+                            mount.sprite = mountClose;
+                        }
                     }
                     break;
                 case 1:
@@ -126,6 +131,11 @@ namespace DTS.Woodworm
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, 0);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, 0);
                         CheckSprite();
+
+                        if (mount.sprite == mountOpen)
+                        {
+                            mount.sprite = mountClose;
+                        }
                     }
                     break;
                 case 2:
@@ -144,6 +154,11 @@ namespace DTS.Woodworm
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, 90);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, 90);
                         CheckSprite();
+
+                        if (mount.sprite == mountOpen)
+                        {
+                            mount.sprite = mountClose;
+                        }
                     }
                     break;
                 case 3:
@@ -162,6 +177,11 @@ namespace DTS.Woodworm
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, -90);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, -90);
                         CheckSprite();
+
+                        if (mount.sprite == mountOpen)
+                        {
+                            mount.sprite = mountClose;
+                        }
                     }
                     break;
             }
@@ -174,7 +194,7 @@ namespace DTS.Woodworm
         bool isFall;
         void CheckFall()
         {
-            if (Physics2D.Raycast(mount.transform.position, mount.transform.right, 1))
+            if (Physics2D.Raycast(mount.transform.position, mount.transform.right, 1, LayerMask.GetMask("Water")))
             {
                 mount.sprite = mountOpen;
             }
