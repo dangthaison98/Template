@@ -8,6 +8,7 @@ namespace DTS.Woodworm
     public class TileControl : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer;
+        public bool IsSafe;
         [HideInInspector] public Vector3Int pos;
 
         public void Setup()
@@ -36,6 +37,7 @@ namespace DTS.Woodworm
 
         public void DestroyTile()
         {
+            if (IsSafe) return;
             transform.GetChild(0).gameObject.SetActive(true);
         }
     }
