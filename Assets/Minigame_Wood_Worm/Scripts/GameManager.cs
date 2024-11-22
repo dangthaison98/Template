@@ -348,6 +348,10 @@ namespace DTS.Woodworm
             }
             OnAutoTile?.Invoke();
         }
+        public void Hint()
+        {
+
+        }
         #endregion
     }
 
