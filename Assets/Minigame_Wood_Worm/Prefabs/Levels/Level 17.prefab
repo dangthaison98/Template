@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6706665495316940124}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &51667805575001933
 GameObject:
@@ -375,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 167079839573011554}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &75531869351431190
 GameObject:
@@ -521,6 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8853478683522577861}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &77831407052639084
 GameObject:
@@ -751,6 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2968551210282452342}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &144823885804653931
 GameObject:
@@ -897,6 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8597178797337264263}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &206261548225672133
 GameObject:
@@ -1127,6 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8910761957863548647}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &324300259195869900
 GameObject:
@@ -1357,6 +1363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 182307340949479748}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &496707969020168771
 GameObject:
@@ -1503,6 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7390170783166654508}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &567816955187948489
 GameObject:
@@ -1649,6 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1357962987408056341}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &571170198805510911
 GameObject:
@@ -2047,6 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3305624071386023109}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &834593477988627325
 GameObject:
@@ -2193,6 +2203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4758554835070115342}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &842683570264013959
 GameObject:
@@ -2339,6 +2350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1118497615129683476}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &845967942825831751
 GameObject:
@@ -2569,6 +2581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8248420303896934494}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &892054895917457435
 GameObject:
@@ -2799,6 +2812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6649552375477128172}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &950079859270460970
 GameObject:
@@ -2945,6 +2959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6108125589158340504}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1023558105965274631
 GameObject:
@@ -3091,6 +3106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1022498818012775070}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1201948969348724798
 GameObject:
@@ -3237,6 +3253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9031453612508532777}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1264980582253508475
 GameObject:
@@ -3383,6 +3400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7969170157477436366}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1443515719584011427
 GameObject:
@@ -3697,6 +3715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 113520332808419623}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1539171176533243124
 GameObject:
@@ -4095,6 +4114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1618948339736963644}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1800742348791667296
 GameObject:
@@ -4493,6 +4513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5182399393907540875}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2098610163595618562
 GameObject:
@@ -4723,6 +4744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4514140428515314029}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2150545920439253977
 GameObject:
@@ -5121,6 +5143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4618870371910542838}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2665069309663564099
 GameObject:
@@ -5351,6 +5374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4670629894105734226}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2748678469041908403
 GameObject:
@@ -5497,6 +5521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3208475492331612199}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2833429054385538384
 GameObject:
@@ -5643,6 +5668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4123371659977341855}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2847024844751064904
 GameObject:
@@ -5789,6 +5815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8950056004104982341}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2848772198291102747
 GameObject:
@@ -6064,6 +6091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2743802002269573637}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3039026165063917742
 GameObject:
@@ -6378,6 +6406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1124812366487420249}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3143953761191596788
 GameObject:
@@ -6692,6 +6721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6332842990078322239}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3196149995545294369
 GameObject:
@@ -6922,6 +6952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1128505880922917105}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3248751503245757953
 GameObject:
@@ -7152,6 +7183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 653657375090346789}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3373308395614373774
 GameObject:
@@ -7466,6 +7498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6794180031721639320}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3564469880892370145
 GameObject:
@@ -8032,6 +8065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3209593643859337699}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3809919062548851706
 GameObject:
@@ -8178,6 +8212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3314232232926286742}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3876199818962833267
 GameObject:
@@ -8408,6 +8443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2684486661302104537}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4075345011287814052
 GameObject:
@@ -8554,6 +8590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4100211709450796324}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4180817935538828211
 GameObject:
@@ -8700,6 +8737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1366919671783730676}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4241153764233177345
 GameObject:
@@ -9396,6 +9434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4109012594190162156}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4760755633801370344
 GameObject:
@@ -9626,6 +9665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1261273488305146862}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5028740702929518102
 GameObject:
@@ -9856,6 +9896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5274742230363651611}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5095714254239153134
 GameObject:
@@ -10086,6 +10127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7561206857247917185}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5162558090706503149
 GameObject:
@@ -11901,6 +11943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8389735948972273395}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5575664153120967660
 GameObject:
@@ -12551,6 +12594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3476921574496332545}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6082638181952819886
 GameObject:
@@ -12781,6 +12825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 518128729572655146}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6199310903763545183
 GameObject:
@@ -13095,6 +13140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5390018973434097933}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6351194784632438128
 GameObject:
@@ -13493,6 +13539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2700975783314377471}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6539807690750666630
 GameObject:
@@ -13639,6 +13686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4537672095797428084}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6587596947841805385
 GameObject:
@@ -13785,6 +13833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7906411937479357086}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6594691352746658898
 GameObject:
@@ -13931,6 +13980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6107761416968866547}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6611846010575292031
 GameObject:
@@ -14077,6 +14127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6254554821355249568}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6613217930465666144
 GameObject:
@@ -14223,6 +14274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6542328856746065715}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6672618806355730460
 GameObject:
@@ -14369,6 +14421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5067430189375423614}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6737042834922553175
 GameObject:
@@ -14515,6 +14568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8004249634172930192}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6857160985280169500
 GameObject:
@@ -14661,6 +14715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5304264601522130308}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6906263655372221645
 GameObject:
@@ -14807,6 +14862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7642318359977435398}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6931261418867461124
 GameObject:
@@ -15037,6 +15093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8623004912065952731}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6975186061850156014
 GameObject:
@@ -15183,6 +15240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2392480389159921951}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7006993843959214046
 GameObject:
@@ -15497,6 +15555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2355242134962874586}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7247249948767823705
 GameObject:
@@ -15643,6 +15702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 528879906249111076}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7278180673695530314
 GameObject:
@@ -15873,6 +15933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3358719090084257921}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7603065580147253503
 GameObject:
@@ -16019,6 +16080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7595128089737179082}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7638368452599641371
 GameObject:
@@ -16249,6 +16311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 497493661523225351}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7686599624500470132
 GameObject:
@@ -16395,6 +16458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3641199581113741150}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7686651196230016833
 GameObject:
@@ -16541,6 +16605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2721993636137140260}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7727787769308701749
 GameObject:
@@ -16771,6 +16836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9091196343796845318}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7832437519814130064
 GameObject:
@@ -16917,6 +16983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7286648377424195549}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7915896163187259629
 GameObject:
@@ -17147,6 +17214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8496401908138059166}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8043795202025288041
 GameObject:
@@ -17293,6 +17361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9172298826689643926}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8054792871371677129
 GameObject:
@@ -17523,6 +17592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2942714112028716965}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8178035881907807811
 GameObject:
@@ -17753,6 +17823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1478625911367657346}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8204644113256745461
 GameObject:
@@ -17899,6 +17970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8346913952076003629}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8211200362848169411
 GameObject:
@@ -18297,6 +18369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1725264048881851108}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8451258534227886645
 GameObject:
@@ -18695,6 +18768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2674695774083691573}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8637609908849732969
 GameObject:
@@ -18841,6 +18915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4486036791068013237}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8694374456339701293
 GameObject:
@@ -18987,6 +19062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2245632661916371004}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8769685622595187113
 GameObject:
@@ -19133,6 +19209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 107044089205283383}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8882906489551137524
 GameObject:
@@ -19279,6 +19356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9086160365219868939}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8931280995774921740
 GameObject:
@@ -19459,6 +19537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5686249913630922495}
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &9141332762796280500
 GameObject:
@@ -19605,6 +19684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7654664210278902290}
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &9220831411419519160
 GameObject:
