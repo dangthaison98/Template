@@ -350,7 +350,7 @@ namespace DTS.Woodworm
         }
         public void Hint()
         {
-
+            tileHolder.ShowHint();
         }
         #endregion
     }

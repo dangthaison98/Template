@@ -40,6 +40,11 @@ namespace DTS.Woodworm
             GameManager.Instance.OnAutoTile?.Invoke();
         }
 
+        public void ShowHint()
+        {
+
+        }
+
         public int GetAmountOfDirtTiles()
         {
             demoShape.CompressBounds();
