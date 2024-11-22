@@ -251,34 +251,48 @@ namespace DTS.Woodworm
         bool isWin;
         void CheckWin()
         {
-            if(tileHolder.tiles.Count == tileHolder.countDemoBlock)
+            if (tileHolder.tiles.Count == tileHolder.countDemoBlock)
             {
                 Vector3 lockDemoPos = Vector3.zero;
+
+                Vector3 lockTilePos = new Vector3(100, 0.5f, 0);
+
+                for (int i = 1; i < tileHolder.tiles.Count; i++)
+                {
+                    if (tileHolder.tiles[i].transform.position.y == 0.5f)
+                    {
+                        if (tileHolder.tiles[i].transform.position.x < lockTilePos.x)
+                        {
+                            lockTilePos.x = tileHolder.tiles[i].transform.position.x;
+                        }
+                    }
+                }
+
                 foreach (var pos in tileHolder.demoShape.cellBounds.allPositionsWithin)
                 {
-                    if (tileHolder.demoShape.GetTile(pos) != null) 
-                    { 
+                    if (tileHolder.demoShape.GetTile(pos) != null)
+                    {
                         lockDemoPos = pos;
                         break;
                     }
                 }
-                for (int i = 1; i < tileHolder.tiles.Count; i++)
+                for (int i = 0; i < tileHolder.tiles.Count; i++)
                 {
-                    if (!tileHolder.demoShape.GetTile(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - tileHolder.tiles[0].transform.position)))
+                    if (!tileHolder.demoShape.GetTile(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - lockTilePos)))
                     {
                         return;
                     }
                 }
 
-                if(isWin) return;
+                if (isWin) return;
                 isWin = true;
                 PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
                 PlayerControl.instance.canControl = false;
 
                 for (int i = 0; i < tileHolder.tiles.Count; i++)
                 {
-                    tileHolder.tiles[i].spriteRenderer.sprite = tileHolder.demoShape.GetSprite(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - tileHolder.tiles[0].transform.position));
-                    if (tileHolder.demoShape.GetTransformMatrix(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - tileHolder.tiles[0].transform.position)).m00 == -1)
+                    tileHolder.tiles[i].spriteRenderer.sprite = tileHolder.demoShape.GetSprite(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - lockTilePos));
+                    if (tileHolder.demoShape.GetTransformMatrix(Vector3Int.FloorToInt(lockDemoPos + tileHolder.tiles[i].transform.position - lockTilePos)).m00 == -1)
                     {
                         tileHolder.tiles[i].spriteRenderer.flipX = true;
                     }
