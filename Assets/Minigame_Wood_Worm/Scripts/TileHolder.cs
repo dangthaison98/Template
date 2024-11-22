@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -11,6 +12,8 @@ namespace DTS.Woodworm
 
         [HideInInspector] public List<TileControl> tiles = new List<TileControl>();
         public Vector2Int size;
+
+        Action OnShowHint;
 
         private void Start()
         {
@@ -35,6 +38,7 @@ namespace DTS.Woodworm
             foreach (TileControl tile in tiles)
             {
                 tile.Setup();
+                OnShowHint += tile.DestroyTile;
             }
 
             GameManager.Instance.OnAutoTile?.Invoke();
@@ -42,7 +46,7 @@ namespace DTS.Woodworm
 
         public void ShowHint()
         {
-
+            OnShowHint?.Invoke();
         }
 
         public int GetAmountOfDirtTiles()

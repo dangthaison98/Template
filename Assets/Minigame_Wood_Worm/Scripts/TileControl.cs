@@ -8,6 +8,7 @@ namespace DTS.Woodworm
     public class TileControl : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer;
+        public GameObject destroyTile;
         [HideInInspector] public Vector3Int pos;
 
         public void Setup()
@@ -32,6 +33,11 @@ namespace DTS.Woodworm
             {
                 spriteRenderer.flipX = false;
             }
+        }
+
+        public void DestroyTile()
+        {
+            destroyTile.SetActive(true);
         }
     }
 }
