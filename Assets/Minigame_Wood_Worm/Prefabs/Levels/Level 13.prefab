@@ -144,10 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7945026028961146429}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &497559361776640269
 GameObject:
@@ -293,10 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5242357462770605514}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &624073105649249678
 GameObject:
@@ -476,10 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5173370796427242354}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1035809845481572273
 GameObject:
@@ -625,10 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1051866873872482484}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1096431380343795482
 GameObject:
@@ -774,10 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7351544903481565062}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1548320320594909693
 GameObject:
@@ -923,10 +908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3421453868181216713}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1903024772653754884
 GameObject:
@@ -1072,10 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5324449471824012839}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1922320388827767951
 GameObject:
@@ -1221,10 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7753045300449803775}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2366803895921226664
 GameObject:
@@ -1370,10 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7305894119003338889}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2578936449389046202
 GameObject:
@@ -1519,10 +1492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 599463426182162822}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2579391748660469849
 GameObject:
@@ -1668,10 +1638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4932730374465199387}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2669017078277129333
 GameObject:
@@ -1817,10 +1784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8899910336024259874}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3093010892714757421
 GameObject:
@@ -1966,10 +1930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 676370378602713954}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3100742961547272339
 GameObject:
@@ -2115,10 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2733894424942905259}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3143798678995432698
 GameObject:
@@ -2394,10 +2352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1579398923463728356}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3425270575630535436
 GameObject:
@@ -2543,10 +2498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4720498919903519190}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3592226869122119625
 GameObject:
@@ -2692,10 +2644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 474129044204815294}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4283794331835541822
 GameObject:
@@ -2841,10 +2790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8082513608821581359}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4331239454287263109
 GameObject:
@@ -2990,10 +2936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5126884433732485510}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4468712625702082711
 GameObject:
@@ -3139,10 +3082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5359315788356695723}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4705228230580423389
 GameObject:
@@ -3333,10 +3273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4292551473919811648}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4941114926035458375
 GameObject:
@@ -3482,10 +3419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4530662950419111944}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5082561411525930007
 GameObject:
@@ -3631,10 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7020053789732804948}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5460685825893293972
 GameObject:
@@ -3780,10 +3711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5192867446060854788}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5484170638795571845
 GameObject:
@@ -3929,10 +3857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2833880143456322876}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5575958402901246409
 GameObject:
@@ -4078,10 +4003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7738726655459911816}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5743164547329322318
 GameObject:
@@ -4227,10 +4149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1167011835391460417}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5785864715805067400
 GameObject:
@@ -4376,10 +4295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5556032418168826991}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6012363435488716428
 GameObject:
@@ -4525,10 +4441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8786441501493170697}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6049047012962207268
 GameObject:
@@ -4674,10 +4587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6858826180667850485}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6121258139784236303
 GameObject:
@@ -4823,10 +4733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2232510573319547116}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6240214057828003977
 GameObject:
@@ -4972,10 +4879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3771214549027675485}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6860546702530343367
 GameObject:
@@ -5121,10 +5025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8795065842262789382}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7080633396297177555
 GameObject:
@@ -5270,10 +5171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2001400638052283628}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7082503654689428481
 GameObject:
@@ -5419,10 +5317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2098182250403588445}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7096444307229175513
 GameObject:
@@ -5568,10 +5463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8466514573496084597}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7199000841715277619
 GameObject:
@@ -5717,10 +5609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7540214552948778959}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7269836745713174904
 GameObject:
@@ -6475,10 +6364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8323564813587272076}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7667543425778193015
 GameObject:
@@ -6624,10 +6510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7176118826546815906}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7684847126660474911
 GameObject:
@@ -6773,10 +6656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4628348995182669163}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7782072690595200977
 GameObject:
@@ -6922,10 +6802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7833340275810773066}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8243222476282538815
 GameObject:
@@ -7071,10 +6948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6114272016348189814}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8260267681524749993
 GameObject:
@@ -7220,10 +7094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 246658521878186244}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8437741982885140432
 GameObject:
@@ -7368,9 +7239,9 @@ MonoBehaviour:
   - {fileID: 6319348335335958461}
   - {fileID: 1623488408358249128}
   - {fileID: 2720286691078477784}
+  size: {x: 6, y: 8}
   tile: {fileID: 6379229152448185703, guid: 80acc2e256093194cbe85d1a889341cb, type: 3}
   startPos: {x: 3, y: 0}
-  size: {x: 6, y: 8}
 --- !u!1 &8747774161553239324
 GameObject:
   m_ObjectHideFlags: 0
@@ -7515,10 +7386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1548981526236535171}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8770539620927851669
 GameObject:
@@ -7664,10 +7532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5375140435387725853}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8828494731170936583
 GameObject:
@@ -7813,10 +7678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5413180576183209126}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8913997513655563556
 GameObject:
@@ -7962,10 +7824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9189215488567653005}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &9129840693632620045
 GameObject:
@@ -8111,8 +7970,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 344297549881335527}
-  leftTile: {fileID: 0}
-  rightTile: {fileID: 0}
-  topTile: {fileID: 0}
-  bottomTile: {fileID: 0}
+  destroyTile: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
