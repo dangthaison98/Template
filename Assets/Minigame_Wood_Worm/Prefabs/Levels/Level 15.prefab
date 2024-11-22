@@ -5947,7 +5947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2771452319397339081}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3511962696709411752
 GameObject:
@@ -11435,7 +11435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4950119221569896471}
-  IsSafe: 0
+  IsSafe: 1
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8293032210837172836
 GameObject:
