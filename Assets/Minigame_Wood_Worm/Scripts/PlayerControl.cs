@@ -102,17 +102,40 @@ namespace DTS.Woodworm
                         currentHeadPos = transform.position;
                         currentBodyPos = body.transform.position;
                         headDirection.parent.transform.position = movement[0];
+
                         body.transform.position = currentHeadPos;
                         tail.transform.position = currentBodyPos;
+
                         faceDirection = Direction.Left;
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, 180);
                         headDirection.parent.eulerAngles = new Vector3(0,0,180);
-                        CheckSprite();
 
-                        if(mount.sprite == mountOpen)
-                        {
-                            mount.sprite = mountClose;
-                        }
+                        mount.sprite = mountClose;
+                        
+                        CheckSprite();
+                    }
+                    else
+                    {
+                        if (Physics2D.Raycast(body.transform.position, Vector2.left, 1, groundLayer)) return;
+
+                        GameManager.Instance.Save();
+
+                        tail.transform.position = (tail.transform.position - body.transform.position).x == 0 ? tail.transform.position : transform.position;
+                        transform.position = body.transform.position + Vector3.left;
+                        headDirection.parent.transform.position = transform.position;
+
+                        currentHeadPos = body.transform.position;
+                        currentBodyPos = tail.transform.position;
+                        GameManager.Instance.DestroyTile(transform.position);
+
+                        faceDirection = Direction.Left;
+                        mount.transform.parent.eulerAngles = new Vector3(0, 0, 180);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, 180);
+
+                        mount.sprite = mountClose;
+
+                        CheckSprite();
+                        CheckFall();
                     }
                     break;
                 case 1:
@@ -130,12 +153,33 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Right;
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, 0);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, 0);
-                        CheckSprite();
 
-                        if (mount.sprite == mountOpen)
-                        {
-                            mount.sprite = mountClose;
-                        }
+                        mount.sprite = mountClose;
+                        
+                        CheckSprite();
+                    }
+                    else
+                    {
+                        if (Physics2D.Raycast(body.transform.position, Vector2.right, 1, groundLayer)) return;
+
+                        GameManager.Instance.Save();
+
+                        tail.transform.position = (tail.transform.position - body.transform.position).x == 0 ? tail.transform.position : transform.position;
+                        transform.position = body.transform.position + Vector3.right;
+                        headDirection.parent.transform.position = transform.position;
+
+                        currentHeadPos = body.transform.position;
+                        currentBodyPos = tail.transform.position;
+                        GameManager.Instance.DestroyTile(transform.position);
+
+                        faceDirection = Direction.Right;
+                        mount.transform.parent.eulerAngles = new Vector3(0, 0, 0);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, 0);
+
+                        mount.sprite = mountClose;
+
+                        CheckSprite();
+                        CheckFall();
                     }
                     break;
                 case 2:
@@ -153,12 +197,33 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Up;
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, 90);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, 90);
-                        CheckSprite();
 
-                        if (mount.sprite == mountOpen)
-                        {
-                            mount.sprite = mountClose;
-                        }
+                        mount.sprite = mountClose;
+                        
+                        CheckSprite();
+                    }
+                    else
+                    {
+                        if (Physics2D.Raycast(body.transform.position, Vector2.up, 1, groundLayer)) return;
+
+                        GameManager.Instance.Save();
+
+                        tail.transform.position = (tail.transform.position - body.transform.position).y == 0 ? tail.transform.position : transform.position;
+                        transform.position = body.transform.position + Vector3.up;
+                        headDirection.parent.transform.position = transform.position;
+
+                        currentHeadPos = body.transform.position;
+                        currentBodyPos = tail.transform.position;
+                        GameManager.Instance.DestroyTile(transform.position);
+
+                        faceDirection = Direction.Up;
+                        mount.transform.parent.eulerAngles = new Vector3(0, 0, 90);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, 90);
+
+                        mount.sprite = mountClose;
+
+                        CheckSprite();
+                        CheckFall();
                     }
                     break;
                 case 3:
@@ -176,12 +241,33 @@ namespace DTS.Woodworm
                         faceDirection = Direction.Down;
                         mount.transform.parent.eulerAngles = new Vector3(0, 0, -90);
                         headDirection.parent.eulerAngles = new Vector3(0, 0, -90);
-                        CheckSprite();
 
-                        if (mount.sprite == mountOpen)
-                        {
-                            mount.sprite = mountClose;
-                        }
+                        mount.sprite = mountClose;
+
+                        CheckSprite();
+                    }
+                    else
+                    {
+                        if (Physics2D.Raycast(body.transform.position, Vector2.down, 1, groundLayer)) return;
+
+                        GameManager.Instance.Save();
+
+                        tail.transform.position = (tail.transform.position - body.transform.position).y == 0 ? tail.transform.position : transform.position;
+                        transform.position = body.transform.position + Vector3.down;
+                        headDirection.parent.transform.position = transform.position;
+
+                        currentHeadPos = body.transform.position;
+                        currentBodyPos = tail.transform.position;
+                        GameManager.Instance.DestroyTile(transform.position);
+
+                        faceDirection = Direction.Down;
+                        mount.transform.parent.eulerAngles = new Vector3(0, 0, -90);
+                        headDirection.parent.eulerAngles = new Vector3(0, 0, -90);
+
+                        mount.sprite = mountClose;
+
+                        CheckSprite();
+                        CheckFall();
                     }
                     break;
             }
