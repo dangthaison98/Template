@@ -258,7 +258,7 @@ namespace DTS.Woodworm
             {
                 Vector3 lockDemoPos = Vector3.zero;
 
-                Vector3 lockTilePos = new Vector3(100, 0.5f, 0);
+                Vector3 lockTilePos = tileHolder.tiles[0].transform.position;
 
                 for (int i = 1; i < tileHolder.tiles.Count; i++)
                 {
@@ -266,7 +266,7 @@ namespace DTS.Woodworm
                     {
                         if(tileHolder.tiles[i].transform.position.x < lockTilePos.x)
                         {
-                            lockTilePos.x = tileHolder.tiles[i].transform.position.x;
+                            lockTilePos = tileHolder.tiles[i].transform.position;
                         }
                     }
                 }
