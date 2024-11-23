@@ -300,6 +300,7 @@ namespace DTS.Woodworm
         }
 
         RaycastHit2D raycastHit;
+        Collider2D[] colli2D;
         public bool CheckInsideFallingChunk(Dictionary<Vector2, TileControl> chunk)
         {
             Vector3 headPos = movement.Count > 0 ? movement[0] : transform.position;
@@ -319,9 +320,19 @@ namespace DTS.Woodworm
             {
                 return false;
             }
-
-
-
+            colli2D = Physics2D.OverlapBoxAll(currentHeadPos, boxCheck, 0);
+            for (int i = 0; i < colli2D.Length; i++)
+            {
+                if (!chunk.ContainsKey(colli2D[i].transform.position))
+                {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        public void FallInsideChunk()
+        {
             isFall = true;
             if (movement.Count > 0)
             {
@@ -337,7 +348,6 @@ namespace DTS.Woodworm
                 currentHeadPos += Vector3.down;
                 currentBodyPos += Vector3.down;
             }
-            return true;
         }
 
         void CheckSprite()
