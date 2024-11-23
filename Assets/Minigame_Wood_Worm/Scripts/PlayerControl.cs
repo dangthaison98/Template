@@ -293,19 +293,48 @@ namespace DTS.Woodworm
 
                 isFall = true;
                 movement.Add(transform.position + Vector3.down);
-                currentHeadPos = body.transform.position + Vector3.down;
-                currentBodyPos = tail.transform.position + Vector3.down;
+                currentHeadPos += Vector3.down;
+                currentBodyPos += Vector3.down;
                 GameManager.Instance.CheckFall();
             }
         }
 
+        RaycastHit2D raycastHit;
         public bool CheckInsideFallingChunk(Dictionary<Vector2, TileControl> chunk)
         {
-            
+            Vector3 headPos = movement.Count > 0 ? movement[0] : transform.position;
+
+            raycastHit = Physics2D.Raycast(headPos, Vector2.down, 1);
+            if (raycastHit && !chunk.ContainsKey(raycastHit.transform.position))
+            {
+                return false;
+            }
+            raycastHit = Physics2D.Raycast(currentHeadPos, Vector2.down, 1);
+            if (raycastHit && !chunk.ContainsKey(raycastHit.transform.position))
+            {
+                return false;
+            }
+            raycastHit = Physics2D.Raycast(currentBodyPos, Vector2.down, 1);
+            if (raycastHit && !chunk.ContainsKey(raycastHit.transform.position))
+            {
+                return false;
+            }
+
+
+
             isFall = true;
-            movement.Add(transform.position + Vector3.down);
-            currentHeadPos = body.transform.position + Vector3.down;
-            currentBodyPos = tail.transform.position + Vector3.down;
+            if (movement.Count > 0)
+            {
+                movement[0] += Vector3.down;
+                currentHeadPos += Vector3.down;
+                currentBodyPos += Vector3.down;
+            }
+            else
+            {
+                movement.Add(transform.position + Vector3.down);
+                currentHeadPos += Vector3.down;
+                currentBodyPos += Vector3.down;
+            }
             return true;
         }
 

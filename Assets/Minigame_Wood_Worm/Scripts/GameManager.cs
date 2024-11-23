@@ -73,7 +73,7 @@ namespace DTS.Woodworm
                 isDoneFall = true;
                 foreach (var key in chunk[fallChunk])
                 {
-                    key.Value.transform.position = Vector2.MoveTowards(key.Value.transform.position, key.Key + Vector2.down, 10 * Time.deltaTime);
+                    key.Value.transform.position = Vector2.MoveTowards(key.Value.transform.position, key.Key + Vector2.down, 15 * Time.deltaTime);
                     if ((Vector2)key.Value.transform.position != key.Key + Vector2.down)
                     {
                         isDoneFall = false;
