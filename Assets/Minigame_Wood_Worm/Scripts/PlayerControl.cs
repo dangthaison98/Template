@@ -213,6 +213,57 @@ namespace DTS.Woodworm
             }
         }
 
+        RaycastHit2D raycastHit;
+        Collider2D[] colli2D;
+        public bool CheckInsideFallingChunk(Dictionary<Vector2, TileControl> chunk)
+        {
+            Vector3 headPos = movement.Count > 0 ? movement[0] : transform.position;
+
+            raycastHit = Physics2D.Raycast(headPos, Vector2.down, 1);
+            if (raycastHit && !chunk.ContainsKey(raycastHit.transform.position))
+            {
+                return false;
+            }
+            raycastHit = Physics2D.Raycast(currentHeadPos, Vector2.down, 1);
+            if (raycastHit && !chunk.ContainsKey(raycastHit.transform.position))
+            {
+                return false;
+            }
+            raycastHit = Physics2D.Raycast(currentBodyPos, Vector2.down, 1);
+            if (raycastHit && !chunk.ContainsKey(raycastHit.transform.position))
+            {
+                return false;
+            }
+            colli2D = Physics2D.OverlapBoxAll(currentHeadPos, boxCheck, 0);
+            for (int i = 0; i < colli2D.Length; i++)
+            {
+                if (!chunk.ContainsKey(colli2D[i].transform.position))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        public void FallInsideChunk()
+        {
+            isFall = true;
+            if (movement.Count > 0)
+            {
+                movement[0] += Vector3.down;
+                currentHeadPos += Vector3.down;
+                currentBodyPos += Vector3.down;
+                body.transform.position = currentHeadPos;
+                tail.transform.position = currentBodyPos;
+            }
+            else
+            {
+                movement.Add(transform.position + Vector3.down);
+                currentHeadPos += Vector3.down;
+                currentBodyPos += Vector3.down;
+            }
+        }
+
         void CheckSprite()
         {
             //Head
