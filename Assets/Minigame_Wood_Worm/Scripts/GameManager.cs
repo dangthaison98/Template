@@ -232,8 +232,11 @@ namespace DTS.Woodworm
                         (Vector2)PlayerControl.instance.currentHeadPos == key.Key + Vector2.down ||
                         (Vector2)PlayerControl.instance.currentBodyPos == key.Key + Vector2.down)
                     {
-                        isFall = false;
-                        break;
+                        if (!PlayerControl.instance.CheckInsideFallingChunk(map))
+                        {
+                            isFall = false;
+                            break;
+                        }
                     }
                 }
                 if (isFall)

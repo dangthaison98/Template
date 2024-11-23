@@ -299,6 +299,16 @@ namespace DTS.Woodworm
             }
         }
 
+        public bool CheckInsideFallingChunk(Dictionary<Vector2, TileControl> chunk)
+        {
+            
+            isFall = true;
+            movement.Add(transform.position + Vector3.down);
+            currentHeadPos = body.transform.position + Vector3.down;
+            currentBodyPos = tail.transform.position + Vector3.down;
+            return true;
+        }
+
         void CheckSprite()
         {
             //Head
