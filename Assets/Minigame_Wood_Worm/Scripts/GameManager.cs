@@ -215,9 +215,10 @@ namespace DTS.Woodworm
         public void CheckFall()
         {
             bool isFall;
-            foreach (var map in chunk) 
+            foreach (var map in chunk)
             {
                 isFall = true;
+                bool isPlayerInChunk = PlayerControl.instance.CheckInsideFallingChunk(map);
                 foreach (var key in map)
                 {
                     if (!map.ContainsKey(key.Key + Vector2.down) && (Physics2D.Raycast(key.Key + Vector2.down, Vector2.down, 0.1f) || key.Key.y < 1))
@@ -232,12 +233,19 @@ namespace DTS.Woodworm
                         (Vector2)PlayerControl.instance.currentHeadPos == key.Key + Vector2.down ||
                         (Vector2)PlayerControl.instance.currentBodyPos == key.Key + Vector2.down)
                     {
-                        isFall = false;
-                        break;
+                        if (!isPlayerInChunk)
+                        {
+                            isFall = false;
+                            break;
+                        }
                     }
                 }
                 if (isFall)
                 {
+                    if (isPlayerInChunk)
+                    {
+                        PlayerControl.instance.FallInsideChunk();
+                    }
                     fallChunk = chunk.IndexOf(map);
                     PlayerControl.instance.canControl = false;
                     return;
