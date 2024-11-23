@@ -328,6 +328,8 @@ namespace DTS.Woodworm
                 movement[0] += Vector3.down;
                 currentHeadPos += Vector3.down;
                 currentBodyPos += Vector3.down;
+                body.transform.position = currentHeadPos;
+                tail.transform.position = currentBodyPos;
             }
             else
             {
