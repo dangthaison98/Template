@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 514134137753067677}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1321317501905787475
 GameObject:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6290131442449914560}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1328320725930253412
 GameObject:
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6230352544664986039}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1555594903803739480
 GameObject:
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1893504071443807694}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1799442145469804038
 GameObject:
@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3089092819203394095}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2128085331708482395
 GameObject:
@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3433349896002803300}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2863541560012000975
 GameObject:
@@ -2988,7 +2988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8132405735450629865}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3305857603308839490
 GameObject:
@@ -3219,7 +3219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6626062109335276641}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3567143456131307011
 GameObject:
@@ -3597,7 +3597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4404848353588465103}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3915260652325987273
 GameObject:
@@ -3925,6 +3925,7 @@ MonoBehaviour:
   size: {x: 5, y: 6}
   tile: {fileID: 6379229152448185703, guid: 80acc2e256093194cbe85d1a889341cb, type: 3}
   startPos: {x: -2, y: 0}
+  hint: 
 --- !u!1 &4530373620695891874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,7 +4155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2334770474172496891}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5317070509837835366
 GameObject:
@@ -4301,7 +4302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6252429407213753401}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5343996768433940943
 GameObject:
@@ -4448,7 +4449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 135982504275629055}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5631294904099536393
 GameObject:
@@ -4847,7 +4848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1078438458657033136}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5797050407310824783
 GameObject:
@@ -5477,7 +5478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5215928328557246943}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6511926626934154719
 GameObject:
@@ -6152,7 +6153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1756780429960582483}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7327078100154011264
 GameObject:
@@ -6299,7 +6300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1389873267378471928}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7413716536802452125
 GameObject:
@@ -6446,7 +6447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8290748828954555540}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7464195352899952367
 GameObject:
@@ -6497,7 +6498,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6557,7 +6558,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6617,7 +6618,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6640,26 +6641,26 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300014, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300002, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300054, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300006, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+    m_Data: {fileID: 21300014, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300004, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300042, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300016, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+    m_Data: {fileID: 21300006, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300018, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300046, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300016, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:

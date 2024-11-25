@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4481565185470390526}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1528192130079273181
 GameObject:
@@ -1409,7 +1409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1242366648925976756}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1605044757979036719
 GameObject:
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7945415862864822338}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1732160923034369422
 GameObject:
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2864838955843551329}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1801302073909357265
 GameObject:
@@ -2018,7 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1335925462091169771}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2223231734937290608
 GameObject:
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6312557421313606531}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2355884897602203861
 GameObject:
@@ -2375,6 +2375,7 @@ MonoBehaviour:
   size: {x: 6, y: 6}
   tile: {fileID: 6379229152448185703, guid: 80acc2e256093194cbe85d1a889341cb, type: 3}
   startPos: {x: -3, y: 0}
+  hint: 
 --- !u!1 &2427389240541685447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,7 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 805640690149399500}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2545051315655288333
 GameObject:
@@ -2898,7 +2899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5910534435759816106}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2799897483484520932
 GameObject:
@@ -3696,7 +3697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7019214969002295622}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3509376219078791932
 GameObject:
@@ -3927,7 +3928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1756592298740372401}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3790083637661991018
 GameObject:
@@ -4893,7 +4894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 981773185631738468}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4636514613008814423
 GameObject:
@@ -5317,7 +5318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3303807245646996257}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4976472130668756831
 GameObject:
@@ -5512,7 +5513,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5542,7 +5543,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5562,7 +5563,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5572,7 +5573,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5641,20 +5642,20 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300048, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300020, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300014, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300008, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300058, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300002, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300004, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+    m_Data: {fileID: 21300020, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300012, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 1
@@ -5663,12 +5664,12 @@ Tilemap:
     m_Data: {fileID: 21300038, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300016, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300004, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300058, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300048, guid: 7781706b908d244c4abf1bf2fe74ce03, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -6173,7 +6174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4992292762260206362}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5418667095539318422
 GameObject:
@@ -6719,7 +6720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 413693013142546931}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5895522291779808167
 GameObject:
@@ -6950,7 +6951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3878478689598076805}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5941728589935960617
 GameObject:
@@ -7412,7 +7413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9038392595856584412}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6490678146795219622
 GameObject:
@@ -7689,7 +7690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3294148648101970995}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6849836382542924491
 GameObject:
@@ -9183,7 +9184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3032522242502552731}
-  IsSafe: 1
+  IsSafe: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8775427230279900340
 GameObject:
