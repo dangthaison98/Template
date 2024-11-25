@@ -7,6 +7,8 @@ namespace DTS.Woodworm
 {
     public class TileHolder : MonoBehaviour
     {
+        public int cameraSize = 15;
+
         public Tilemap demoShape;
         [HideInInspector] public int countDemoBlock;
 
@@ -34,6 +36,8 @@ namespace DTS.Woodworm
             }
 
             GameManager.Instance.tileHolder = this;
+
+            GameManager.Instance.virtualCamera.m_Lens.OrthographicSize = cameraSize;
 
             foreach (TileControl tile in tiles)
             {

@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,6 +37,8 @@ namespace DTS.Woodworm
         public Tilemap getSpriteTilemap;
         public TileBase tileBase;
         public Action OnAutoTile;
+
+        public CinemachineVirtualCamera virtualCamera;
 
         private List<SaveData> saveDatas = new List<SaveData>();
 
