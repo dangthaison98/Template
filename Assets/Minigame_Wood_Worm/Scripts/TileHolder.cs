@@ -7,6 +7,7 @@ namespace DTS.Woodworm
 {
     public class TileHolder : MonoBehaviour
     {
+        public int wormPos;
         public int cameraSize = 15;
 
         public Tilemap demoShape;
@@ -38,6 +39,7 @@ namespace DTS.Woodworm
             GameManager.Instance.tileHolder = this;
 
             GameManager.Instance.virtualCamera.m_Lens.OrthographicSize = cameraSize;
+            PlayerControl.instance.transform.parent.position = new Vector3(wormPos, 0, 0);
 
             foreach (TileControl tile in tiles)
             {
