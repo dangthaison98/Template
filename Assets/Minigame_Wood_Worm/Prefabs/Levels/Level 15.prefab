@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wormPos: -5
-  cameraSize: 15
+  cameraSize: 18
   demoShape: {fileID: 5476675844548677439}
   countDemoBlock: 0
   tiles:
