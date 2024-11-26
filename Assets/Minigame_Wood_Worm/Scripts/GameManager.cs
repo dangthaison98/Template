@@ -42,6 +42,11 @@ namespace DTS.Woodworm
 
         private List<SaveData> saveDatas = new List<SaveData>();
 
+
+        [Header("Effect")]
+        public GameObject shatterEffect;
+
+
         public void InitTile(TileControl tile, int count)
         {
             if (chunk.Count == 0)
@@ -128,6 +133,7 @@ namespace DTS.Woodworm
                     tileHolder.tiles.Remove(map[pos]);
                     getSpriteTilemap.SetTile(map[pos].pos, null);
                     map[pos].gameObject.SetActive(false);
+                    PoolManager.Instance.Spawn("Shatter Effect", shatterEffect, pos, Quaternion.identity);
                     map.Remove(pos);
                     OnAutoTile?.Invoke();
 

@@ -2532,6 +2532,7 @@ MonoBehaviour:
   getSpriteTilemap: {fileID: 1262008264}
   tileBase: {fileID: 11400000, guid: f48d9376edd094f49b74a4e575d2be8b, type: 2}
   virtualCamera: {fileID: 1724467530}
+  shatterEffect: {fileID: 4899676660882900477, guid: 7136267c6ba55184c9aa84da402d350b, type: 3}
 --- !u!4 &1950990434
 Transform:
   m_ObjectHideFlags: 0

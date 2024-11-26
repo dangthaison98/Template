@@ -4910,4 +4910,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d0fc868cba9e04dbf770dc8246227c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectName: Shatter effect
+  effectName: Shatter Effect

@@ -16,7 +16,7 @@ namespace DTS.Woodworm
 
         private void OnDisable()
         {
-            if (Application.isPlaying) return;
+            if (isApplicationQuitting) return;
 
             PoolManager.Instance.Despawn(effectName, gameObject);
         }
