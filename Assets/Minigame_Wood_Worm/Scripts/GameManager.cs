@@ -47,6 +47,9 @@ namespace DTS.Woodworm
         public GameObject shatterEffect;
 
 
+        [Header("Editor")]
+        public bool isEditor;
+
         public void InitTile(TileControl tile, int count)
         {
             if (chunk.Count == 0)
@@ -59,6 +62,8 @@ namespace DTS.Woodworm
         private void Awake()
         {
             Application.targetFrameRate = 60;
+
+            if (isEditor) return;
 
             int level = PlayerPrefs.GetInt("Level", 0) % levelData.levels.Length;
             Instantiate(levelData.levels[level]);

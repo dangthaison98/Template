@@ -70,25 +70,25 @@ namespace DTS.Woodworm
 #if UNITY_EDITOR
         public GameObject tile;
         public Vector2Int startPos;
-        public List<int> hint = new List<int>();
+        //public List<int> hint = new List<int>();
         public void CreateBlocks()
         {
             if (tile == null) return;
 
-            hint.Clear();
+            //hint.Clear();
 
             foreach (TileControl tile in tiles) 
             {
                 if (tile)
                 {
-                    if (tile.IsSafe)
-                    {
-                        hint.Add(1);
-                    }
-                    else
-                    {
-                        hint.Add(0);
-                    }
+                    //if (tile.IsSafe)
+                    //{
+                    //    hint.Add(1);
+                    //}
+                    //else
+                    //{
+                    //    hint.Add(0);
+                    //}
                     DestroyImmediate(tile.gameObject);
                 }
             }
@@ -101,7 +101,7 @@ namespace DTS.Woodworm
                 for (int x = 0; x < size.x; x++)
                 {
                     var tl = Instantiate(tile, startPos + new Vector2(x + 0.5f, y + 0.5f), Quaternion.identity, transform).GetComponent<TileControl>();
-                    tl.IsSafe = hint[count] == 1 ? true : false;
+                    //tl.IsSafe = hint[count] == 1 ? true : false;
                     count++;
                     tiles.Add(tl);
                 }
