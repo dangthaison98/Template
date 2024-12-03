@@ -250,10 +250,9 @@ namespace DTS.Woodworm
                     PlayerControl.instance.canControl = false;
                     return;
                 }
-
-                PlayerControl.instance.canControl = true;
             }
 
+            PlayerControl.instance.canControl = true;
             CheckWin();
         }
         bool isWin;
